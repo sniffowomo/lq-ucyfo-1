@@ -1,1 +1,54 @@
 No files changed, compilation skipped
+Script ran successfully.
+
+== Return ==
+0: contract SimpleStorage 0x4Da1708Ba52ffFDaC827894842A4374297888b35
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 0.359529889 gwei
+
+Estimated total gas used for script: 705640
+
+Estimated amount required: 0.00025369867087396 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+##
+Start verification for (1) contracts
+Start verifying contract `0x4Da1708Ba52ffFDaC827894842A4374297888b35` deployed on sepolia
+Compiler version: 0.8.28
+
+Submitting verification for [src/SimpleStorage.sol:SimpleStorage] 0x4Da1708Ba52ffFDaC827894842A4374297888b35.
+Warning: Etherscan could not detect the deployment.; waiting 5 seconds before trying again (4 tries remaining)
+
+Submitting verification for [src/SimpleStorage.sol:SimpleStorage] 0x4Da1708Ba52ffFDaC827894842A4374297888b35.
+Warning: Etherscan could not detect the deployment.; waiting 5 seconds before trying again (3 tries remaining)
+
+Submitting verification for [src/SimpleStorage.sol:SimpleStorage] 0x4Da1708Ba52ffFDaC827894842A4374297888b35.
+Submitted contract for verification:
+	Response: `OK`
+	GUID: `hervdtmr8yp8stfihr6jq7s8gnhfqvc7rkxsptxpnsdh1hft7m`
+	URL: https://sepolia.etherscan.io/address/0x4da1708ba52fffdac827894842a4374297888b35
+Contract verification status:
+Response: `NOTOK`
+Details: `Pending in queue`
+Warning: Verification is still pending...; waiting 15 seconds before trying again (7 tries remaining)
+Contract verification status:
+Response: `OK`
+Details: `Pass - Verified`
+Contract successfully verified
+All (1) contracts were verified!
+
+Transactions saved to: /workspaces/lq-ucyfo-1/WO/fo/fs1/broadcast/DeploySimpleStorage.s.sol/11155111/run-latest.json
+
+Sensitive values saved to: /workspaces/lq-ucyfo-1/WO/fo/fs1/cache/DeploySimpleStorage.s.sol/11155111/run-latest.json
+
