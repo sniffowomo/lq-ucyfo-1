@@ -1,0 +1,19 @@
+No files changed, compilation skipped
+Script ran successfully.
+
+== Return ==
+0: contract SimpleStorage 0x22E143A618AdeadE32ae9B729Aa2254Ef02fe544
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 17000
+
+Estimated gas price: 0.002200304 gwei
+
+Estimated total gas used for script: 705640
+
+Estimated amount required: 0.00000155262251456 ETH
+
+==========================
