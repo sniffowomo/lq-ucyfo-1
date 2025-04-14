@@ -20,71 +20,7 @@ hea1() {
     echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
 }
 
-ca_wa_ba() {
-    hea1 "Balance Checker"
-
-    WA1="0x2ce40e5d9BC00dA5f397690E83E88183c4d4b23F"
-    WA2="0x5508D7e21f7B096481AfCc9bA2e2a405Be96b878"
-    WA3="0x2C1381655097598Bae22c5326b0F3B43220a18c4"
-    SEP_RPC="https://eth-sepolia.g.alchemy.com/v2/YfG5-esHajH3FpsLvC4eMFMEFYl9Lqcg"
-    HOL_RPC="https://eth-holesky.g.alchemy.com/v2/YfG5-esHajH3FpsLvC4eMFMEFYl9Lqcg"
-
-    CO1S="cast b -e ${WA1} -r ${SEP_RPC}"
-    CO1H="cast b -e ${WA1} -r ${HOL_RPC}"
-    CO2S="cast b -e ${WA2} -r ${SEP_RPC}"
-    CO2H="cast b -e ${WA2} -r ${HOL_RPC}"
-    CO3S="cast b -e ${WA3} -r ${SEP_RPC}"
-    CO3H="cast b -e ${WA3} -r ${HOL_RPC}"
-
-    w1_output_sepolia=$(eval "$CO1S")
-    if [ $? -ne 0 ]; then
-        echo -e "${RED}${WA1}Sepolia balance check failed${NC}"
-        exit 1
-    fi
-
-    w1_output_holesky=$(eval "$CO1H")
-    if [ $? -ne 0 ]; then
-        echo -e "${RED}${WA1} - olesky balance check failed${NC}"
-        exit 1
-    fi
-
-    w2_output_sepolia=$(eval "$CO2S")
-    if [ $? -ne 0 ]; then
-        echo -e "${RED}${WA2}Sepolia balance check failed${NC}"
-        exit 1
-    fi
-
-    w2_output_holesky=$(eval "$CO2H")
-    if [ $? -ne 0 ]; then
-        echo -e "${RED}${WA2}Holesky balance check failed${NC}"
-        exit 1
-    fi
-
-    w3_output_sepolia=$(eval "$CO3S")
-    if [ $? -ne 0 ]; then
-        echo -e "${RED}${WA2}Sepolia balance check failed${NC}"
-        exit 1
-    fi
-
-    w3_output_holesky=$(eval "$CO3H")
-    if [ $? -ne 0 ]; then
-        echo -e "${RED}${WA2}Holesky balance check failed${NC}"
-        exit 1
-    fi
-
-    echo -e "${GREEN}${WA1}Sepolia Balance: $w1_output_sepolia${NC}"
-    echo -e "${GREEN}${WA1}Holesky Balance: $w1_output_holesky${NC}"
-    echo -e "-------------------------------------------------------"
-    echo -e "${GREEN}${WA2}Sepolia Balance: $w2_output_sepolia${NC}"
-    echo -e "${GREEN}${WA2}Holesky Balance: $w2_output_holesky${NC}"
-    echo -e "-------------------------------------------------------"
-    echo -e "${GREEN}${WA3}Sepolia Balance: $w3_output_sepolia${NC}"
-    echo -e "${GREEN}${WA3}Holesky Balance: $w3_output_holesky${NC}"
-
-    echo -e "${GREEN}Balance Check Completed${NC}"
-}
-
-ca_wa_ba2() {
+cwb() {
     hea1 "Balance Checker"
 
     # --- Configuration ---
@@ -97,8 +33,8 @@ ca_wa_ba2() {
 
     # Network Configurations (Format: "NetworkName:RPC_URL")
     local -a networks=(
-        "Sepolia:https://eth-sepolia.g.alchemy.com/v2/YfG5-esHajH3FpsLvC4eMFMEFYl9Lqcg"
-        "Holesky:https://eth-holesky.g.alchemy.com/v2/YfG5-esHajH3FpsLvC4eMFMEFYl9Lqcg"
+        "Sepolia:https://eth-sepolia.g.alchemy.com/v2/y-cD2hUWMXwa6cAWy7uplLSSoRQ5v7Fx"
+        "Holesky:https://eth-holesky.g.alchemy.com/v2/y-cD2hUWMXwa6cAWy7uplLSSoRQ5v7Fx"
     )
     # --- End Configuration ---
 
@@ -154,7 +90,7 @@ ca_wa_ba2() {
 
 # Sending function
 
-ca_send() {
+cas() {
     echo -e "${GREEN}Sending function called${NC}"
 
     # --- Configuration ---
@@ -172,8 +108,8 @@ ca_send() {
 
     # Network Configurations (Format: "NetworkName:RPC_URL")
     local -a networks=(
-        "https://eth-sepolia.g.alchemy.com/v2/YfG5-esHajH3FpsLvC4eMFMEFYl9Lqcg"
-        "https://eth-holesky.g.alchemy.com/v2/YfG5-esHajH3FpsLvC4eMFMEFYl9Lqcg"
+        "https://eth-holesky.g.alchemy.com/v2/y-cD2hUWMXwa6cAWy7uplLSSoRQ5v7Fx"
+        "https://eth-holesky.g.alchemy.com/v2/y-cD2hUWMXwa6cAWy7uplLSSoRQ5v7Fx"
     )
 
     # --- AmountSend ---
