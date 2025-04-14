@@ -26,9 +26,8 @@ cwb() {
     # --- Configuration ---
     # Wallet Addresses
     local -a wallets=(
-        "0x2ce40e5d9BC00dA5f397690E83E88183c4d4b23F"
-        "0x5508D7e21f7B096481AfCc9bA2e2a405Be96b878"
-        "0x2C1381655097598Bae22c5326b0F3B43220a18c4"
+        "0x420A8Fe13265Df3B9323C3D7681b2854B1309338"
+        "0x420fFfdA7565D31e9b4b7ebAF0269b5564644656"
     )
 
     # Network Configurations (Format: "NetworkName:RPC_URL")
@@ -95,20 +94,19 @@ cas() {
 
     # --- Configuration ---
     local -a wallets=(
-        "0x2ce40e5d9BC00dA5f397690E83E88183c4d4b23F"
-        "0x5508D7e21f7B096481AfCc9bA2e2a405Be96b878"
-        "0x2C1381655097598Bae22c5326b0F3B43220a18c4"
+        "0x420A8Fe13265Df3B9323C3D7681b2854B1309338"
+        "0x420fFfdA7565D31e9b4b7ebAF0269b5564644656"
     )
 
     local -a keyz=(
-        "0x3f03926cdb1f85a7b189060f53b0d055eb8c0cc9a838e929525eded8d7440dde"
-        "0x6ce075e337c519ed35567152183557bbfec6d8c33d480464539a1fa2fd53dc04"
-        "0xf66f5d4d5e2c7477f1139c94308732eb962309c2808838be8d7331f1a0b6806c"
+        "0x6890220d6cc0218032cab963a528672d85643a2c7edf340de6e27861d1900958"
+        "0xff630bf91f95d3e7af70c12490b858cd5e0818b2bc6af6fccff9d933a1097bc4"
+
     )
 
     # Network Configurations (Format: "NetworkName:RPC_URL")
     local -a networks=(
-        "https://eth-holesky.g.alchemy.com/v2/y-cD2hUWMXwa6cAWy7uplLSSoRQ5v7Fx"
+        "https://eth-sepolia.g.alchemy.com/v2/y-cD2hUWMXwa6cAWy7uplLSSoRQ5v7Fx"
         "https://eth-holesky.g.alchemy.com/v2/y-cD2hUWMXwa6cAWy7uplLSSoRQ5v7Fx"
     )
 
@@ -128,4 +126,4 @@ cas() {
 }
 
 # Execution
-ca_wa_ba2
+cwb

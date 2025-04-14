@@ -94,7 +94,7 @@ fo_create_holeksy() {
     hea1 "Foundry Create - One of contract deployment"
 
     CONTRACT_PATH="src/Counter.sol:Counter"
-    LOG_FILE="logs/deploy_create.log"
+    LOG_FILE="logs/deploy_create_holesky.log"
     mkdir -p logs
 
     echo -e "██╗  ██╗  ██████╗  ██╗      ███████╗ ███████╗ ██╗  ██╗ ██╗   ██╗"
@@ -124,7 +124,7 @@ fo_create_sepolia() {
     hea1 "Foundry Create - One of contract deployment"
 
     CONTRACT_PATH="src/Counter.sol:Counter"
-    LOG_FILE="logs/deploy_create.log"
+    LOG_FILE="logs/deploy_create_sepolia.log"
     mkdir -p logs
 
     echo -e "███████╗ ███████╗ ██████╗   ██████╗  ██╗      ██╗  █████╗ "
@@ -153,7 +153,7 @@ fo_create_sepolia() {
 fo_script_holeksy() {
     hea1 "Foundry Script - One of contract deployment"
 
-    LOG_FILE="logs/deploy_script.log"
+    LOG_FILE="logs/deploy_script._holesky.log"
     mkdir -p logs
 
     echo -e "██╗  ██╗  ██████╗  ██╗      ███████╗ ███████╗ ██╗  ██╗ ██╗   ██╗"
