@@ -238,7 +238,7 @@ fo_script_sepolia() {
     echo -e "╚══════╝ ╚══════╝ ╚═╝       ╚═════╝  ╚══════╝ ╚═╝ ╚═╝  ╚═╝"
 
     CO1="forge script ${CONTRACT_PATH} \
-        --rpc-url ${rpcz[1]} \
+        --rpc-url ${rpcz[0]} \
         --private-key ${keyz[0]} \
         --etherscan-api-key ${ETHERSCAN_API_KEY} \
         --verify \
