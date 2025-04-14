@@ -112,6 +112,8 @@ fo_create_holeksy() {
         --rpc-url ${rpcz[1]} \
         --private-key ${keyz[0]} \
         --etherscan-api-key ${ETHERSCAN_API_KEY} \
+        --optimize true \
+        ----optimizer-runs 999\
         --verify --broadcast \
         --out outz/"
 
