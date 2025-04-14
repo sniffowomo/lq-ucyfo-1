@@ -99,7 +99,7 @@ fo_create() {
 
     CO1="forge create ${CONTRACT_PATH} \
         --rpc-url ${rpcz[1]} \
-        --private-key ${keyz[1]} \
+        --private-key ${keyz[0]} \
         --etherscan-api-key ${ETHERSCAN_API_KEY} \
         --verify --broadcast \
         --out outz/"
@@ -135,4 +135,4 @@ fo_script() {
 }
 
 # Execution
-fo_script
+fo_create
