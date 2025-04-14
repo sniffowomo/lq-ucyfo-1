@@ -190,11 +190,14 @@ fo_create_anvil() {
 # Forge Script
 ################################################
 
+# Common Variables
+CONTRACT_PATH="script/DeploySimpleStorage.s.sol:DeploySimpleStorage"
+
 fo_script_holeksy() {
     hea1 "Foundry Script - One of contract deployment"
 
     LOG_FILE="logs/deploy_script._holesky.log"
-    CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
+
     mkdir -p logs
 
     echo -e "██╗  ██╗  ██████╗  ██╗      ███████╗ ███████╗ ██╗  ██╗ ██╗   ██╗"
@@ -223,7 +226,6 @@ fo_script_sepolia() {
     hea1 "Foundry Script - One of contract deployment"
 
     LOG_FILE="logs/deploy_script_sepolia.log"
-    CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
     mkdir -p logs
 
     echo -e "███████╗ ███████╗ ██████╗   ██████╗  ██╗      ██╗  █████╗ "
@@ -250,8 +252,6 @@ fo_script_sepolia() {
 
 fo_script_anvil() {
     hea1 "Foundry Script - One of contract deployment"
-
-    CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
     LOG_FILE="logs/deploy_create_avil.log"
     mkdir -p logs
 

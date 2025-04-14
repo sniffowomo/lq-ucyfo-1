@@ -1,4 +1,4 @@
-// Solidity for deploying a script 
+// Solidity for deploying a script
 // SPDX-License-Identifier: SmellPanty
 
 pragma solidity ^0.8.19;
@@ -6,11 +6,8 @@ pragma solidity ^0.8.19;
 import {Script} from "forge-std/Script.sol";
 import {SimpleStorage} from "../src/SimpleStorage.sol";
 
-contract DeploySimpleStorage is Script{
-    
-    function run() external returns(SimpleStorage) {
-
+contract DeploySimpleStorage is Script {
+    function run() external returns (SimpleStorage) {
         vm.startBroadcast();
     }
-
 }

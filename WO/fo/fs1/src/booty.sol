@@ -1,4 +1,4 @@
-// Booty.sol gfx 
+// Booty.sol gfx
 
 // SPDX-License-Identifier: SmellPanty
 pragma solidity ^0.8.19;
@@ -62,10 +62,6 @@ pragma solidity ^0.8.19;
 // ║0K0KO.,,,,'.........xKKO   ...........;K0000000d............:K00k   ........,0║
 // ╚══════════════════════════════════════════════════════════════════════════════╝
 
-
 contract Booty {
-
-    function booty () public pure {
-
-    }
+    function booty() public pure {}
 }
