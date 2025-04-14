@@ -1,0 +1,27 @@
+Compiling 16 files with Solc 0.8.28
+Solc 0.8.28 finished in 520.35ms
+Compiler run successful!
+Script ran successfully.
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 17000
+
+Estimated gas price: 0.002095526 gwei
+
+Estimated total gas used for script: 203856
+
+Estimated amount required: 0.000000427185548256 ETH
+
+==========================
+
+Transactions saved to: /workspaces/lq-ucyfo-1/WO/fo/t1/broadcast/Counter.s.sol/17000/run-latest.json
+
+Sensitive values saved to: /workspaces/lq-ucyfo-1/WO/fo/t1/cache/Counter.s.sol/17000/run-latest.json
+
+Error: Failed to send transaction
+
+Context:
+- server returned an error response: error code -32003: insufficient funds for gas * price + value: have 0 want 427185548256
