@@ -32,6 +32,9 @@ contract SimpleStorage {
     }
 
     // Function for adding person
-    function addPerson(string memory _name, )
+    function addPerson(string memory _name, uint256 _favNum ) public {
+        listofPeople.push(Person(_favNum, _name));
+        nameToFavNum[_name] = _favNum;
+    }
 
 }
