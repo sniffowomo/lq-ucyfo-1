@@ -17,3 +17,38 @@ Estimated total gas used for script: 705640
 Estimated amount required: 0.00000155262251456 ETH
 
 ==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+##
+Start verification for (1) contracts
+Start verifying contract `0x22E143A618AdeadE32ae9B729Aa2254Ef02fe544` deployed on holesky
+Compiler version: 0.8.28
+
+Submitting verification for [src/SimpleStorage.sol:SimpleStorage] 0x22E143A618AdeadE32ae9B729Aa2254Ef02fe544.
+Warning: Etherscan could not detect the deployment.; waiting 5 seconds before trying again (4 tries remaining)
+
+Submitting verification for [src/SimpleStorage.sol:SimpleStorage] 0x22E143A618AdeadE32ae9B729Aa2254Ef02fe544.
+Warning: Etherscan could not detect the deployment.; waiting 5 seconds before trying again (3 tries remaining)
+
+Submitting verification for [src/SimpleStorage.sol:SimpleStorage] 0x22E143A618AdeadE32ae9B729Aa2254Ef02fe544.
+Submitted contract for verification:
+	Response: `OK`
+	GUID: `vwi1gingeplvb9njtxjtjcapemdxm94rih9fvptayeydzjssuc`
+	URL: https://holesky.etherscan.io/address/0x22e143a618adeade32ae9b729aa2254ef02fe544
+Contract verification status:
+Response: `NOTOK`
+Details: `Pending in queue`
+Warning: Verification is still pending...; waiting 15 seconds before trying again (7 tries remaining)
+Contract verification status:
+Response: `NOTOK`
+Details: `Already Verified`
+Contract source code already verified
+All (1) contracts were verified!
+
+Transactions saved to: /workspaces/lq-ucyfo-1/WO/fo/fs1/broadcast/DeploySimpleStorage.s.sol/17000/run-latest.json
+
+Sensitive values saved to: /workspaces/lq-ucyfo-1/WO/fo/fs1/cache/DeploySimpleStorage.s.sol/17000/run-latest.json
+
