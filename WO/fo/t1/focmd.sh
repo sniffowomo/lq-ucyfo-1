@@ -135,7 +135,7 @@ fo_script() {
 
     CO1="forge script script/Counter.s.sol:CounterScript \
         --rpc-url ${rpcz[1]} \
-        --private-key ${keyz[1]} \
+        --private-key ${keyz[0]} \
         --broadcast \
         --out outz/"
 
