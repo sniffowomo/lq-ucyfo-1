@@ -206,5 +206,37 @@ fo_script_sepolia() {
     echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
 }
 
-# Execution
-fo_script
+main_menu() {
+    echo -e "${YELLOW}Select an option:${NC}"
+    echo "1) Full Foundry + Slither Setup (foset)"
+    echo "2) Foundry Only Setup (fo_only)"
+    echo "3) Run Forge Tests (fo_test)"
+    echo "4) Create Contract on Holesky (fo_create_holeksy)"
+    echo "5) Create Contract on Sepolia (fo_create_sepolia)"
+    echo "6) Script Deploy on Holesky (fo_script_holeksy)"
+    echo "7) Script Deploy on Sepolia (fo_script_sepolia)"
+    echo "0) Exit"
+
+    read -p "Enter your choice [0-7]: " choice
+
+    case $choice in
+    1) foset ;;
+    2) fo_only ;;
+    3) fo_test ;;
+    4) fo_create_holeksy ;;
+    5) fo_create_sepolia ;;
+    6) fo_script_holeksy ;;
+    7) fo_script_sepolia ;;
+    0)
+        echo -e "${GREEN}Exiting. Later skater! 🛹${NC}"
+        exit 0
+        ;;
+    *)
+        echo -e "${RED}Invalid choice. Try again.${NC}"
+        exit 1
+        ;;
+    esac
+}
+
+# Call the menu once
+main_menu
