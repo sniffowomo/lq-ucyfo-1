@@ -3,6 +3,7 @@ out/
 cache/
 broadcast/
 coverage/
+.wake/
 
 # Forge standard output
 *.t.sol.json
