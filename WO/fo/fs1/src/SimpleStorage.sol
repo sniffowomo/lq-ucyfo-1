@@ -3,6 +3,8 @@
 // SPDX-License-Identifier: SmellPanty
 pragma solidity ^0.8.19;
 
+import "./booty.sol";
+
 // Initial Contract
 contract SimpleStorage { 
     // Storage for the favNum
