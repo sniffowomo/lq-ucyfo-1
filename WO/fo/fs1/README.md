@@ -11,6 +11,7 @@
       6. [Deploy](#deploy)
       7. [Cast](#cast)
       8. [Help](#help)
+2. [Notez Section](#notez-section)
 
 
 # fs1 
@@ -83,3 +84,5 @@ $ forge --help
 $ anvil --help
 $ cast --help
 ```
+
+# Notez Section
