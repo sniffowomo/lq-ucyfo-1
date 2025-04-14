@@ -90,10 +90,14 @@ fo_test() {
     eval "$CO1"
 }
 
+###############################################
+# Forge Create
+################################################
+
 fo_create_holeksy() {
     hea1 "Foundry Create - One of contract deployment"
 
-    CONTRACT_PATH="src/Counter.sol:Counter"
+    CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
     LOG_FILE="logs/deploy_create_holesky.log"
     mkdir -p logs
 
@@ -123,7 +127,7 @@ fo_create_holeksy() {
 fo_create_sepolia() {
     hea1 "Foundry Create - One of contract deployment"
 
-    CONTRACT_PATH="src/Counter.sol:Counter"
+    CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
     LOG_FILE="logs/deploy_create_sepolia.log"
     mkdir -p logs
 
@@ -150,10 +154,47 @@ fo_create_sepolia() {
     echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
 }
 
+fo_create_anvil() {
+    hea1 "Foundry Create - One of contract deployment"
+
+    CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
+    LOG_FILE="logs/deploy_create_avil.log"
+    mkdir -p logs
+
+    echo -e " █████╗  ███╗   ██╗ ██╗   ██╗ ██╗ ██╗     "
+    echo -e "██╔══██╗ ████╗  ██║ ██║   ██║ ██║ ██║     "
+    echo -e "███████║ ██╔██╗ ██║ ██║   ██║ ██║ ██║     "
+    echo -e "██╔══██║ ██║╚██╗██║ ╚██╗ ██╔╝ ██║ ██║     "
+    echo -e "██║  ██║ ██║ ╚████║  ╚████╔╝  ██║ ███████╗"
+    echo -e "╚═╝  ╚═╝ ╚═╝  ╚═══╝   ╚═══╝   ╚═╝ ╚══════╝"
+
+    ANVIL_RPC="127.0.0.1:8545"
+    ANVIL_KEY="0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
+
+    CO1="forge create ${CONTRACT_PATH} \
+        --rpc-url  ${ANVIL_RPC}\
+        --private-key ${ANVIL_KEY} \
+        --broadcast \
+        --out outz/"
+
+    echo -e "${BLUE}Running: $CO1${NC}"
+
+    # Run and log to file
+    eval "$CO1" 2>&1 | tee "$LOG_FILE"
+
+    echo -e "${GREEN}Successfully deployed contract${NC}"
+    echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
+}
+
+###############################################
+# Forge Script
+################################################
+
 fo_script_holeksy() {
     hea1 "Foundry Script - One of contract deployment"
 
     LOG_FILE="logs/deploy_script._holesky.log"
+    CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
     mkdir -p logs
 
     echo -e "██╗  ██╗  ██████╗  ██╗      ███████╗ ███████╗ ██╗  ██╗ ██╗   ██╗"
@@ -163,7 +204,7 @@ fo_script_holeksy() {
     echo -e "██║  ██║ ╚██████╔╝ ███████╗ ███████╗ ███████║ ██║  ██╗    ██║   "
     echo -e "╚═╝  ╚═╝  ╚═════╝  ╚══════╝ ╚══════╝ ╚══════╝ ╚═╝  ╚═╝    ╚═╝   "
 
-    CO1="forge script script/Counter.s.sol:CounterScript \
+    CO1="forge script ${CONTRACT_PATH} \
         --rpc-url ${rpcz[1]} \
         --private-key ${keyz[0]} \
         --broadcast \
@@ -182,6 +223,7 @@ fo_script_sepolia() {
     hea1 "Foundry Script - One of contract deployment"
 
     LOG_FILE="logs/deploy_script_sepolia.log"
+    CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
     mkdir -p logs
 
     echo -e "███████╗ ███████╗ ██████╗   ██████╗  ██╗      ██╗  █████╗ "
@@ -191,7 +233,7 @@ fo_script_sepolia() {
     echo -e "███████║ ███████╗ ██║      ╚██████╔╝ ███████╗ ██║ ██║  ██║"
     echo -e "╚══════╝ ╚══════╝ ╚═╝       ╚═════╝  ╚══════╝ ╚═╝ ╚═╝  ╚═╝"
 
-    CO1="forge script script/Counter.s.sol:CounterScript \
+    CO1="forge script ${CONTRACT_PATH} \
         --rpc-url ${rpcz[1]} \
         --private-key ${keyz[0]} \
         --broadcast \
@@ -206,6 +248,42 @@ fo_script_sepolia() {
     echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
 }
 
+fo_script_anvil() {
+    hea1 "Foundry Script - One of contract deployment"
+
+    CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
+    LOG_FILE="logs/deploy_create_avil.log"
+    mkdir -p logs
+
+    echo -e " █████╗  ███╗   ██╗ ██╗   ██╗ ██╗ ██╗     "
+    echo -e "██╔══██╗ ████╗  ██║ ██║   ██║ ██║ ██║     "
+    echo -e "███████║ ██╔██╗ ██║ ██║   ██║ ██║ ██║     "
+    echo -e "██╔══██║ ██║╚██╗██║ ╚██╗ ██╔╝ ██║ ██║     "
+    echo -e "██║  ██║ ██║ ╚████║  ╚████╔╝  ██║ ███████╗"
+    echo -e "╚═╝  ╚═╝ ╚═╝  ╚═══╝   ╚═══╝   ╚═╝ ╚══════╝"
+
+    ANVIL_RPC="127.0.0.1:8545"
+    ANVIL_KEY="0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
+
+    CO1="forge create ${CONTRACT_PATH} \
+        --rpc-url ${ANVIL_RPC} \
+        --private-key ${ANVIL_KEY} \
+        --broadcast \
+        --out outz/"
+
+    echo -e "${BLUE}Running: $CO1${NC}"
+
+    # Run and log to file
+    eval "$CO1" 2>&1 | tee "$LOG_FILE"
+
+    echo -e "${GREEN}Successfully deployed contract${NC}"
+    echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
+}
+
+###############################################
+# Manual
+################################################
+
 main_menu() {
     echo -e "${CYAN}┌──────────────────────────────────────────┐${NC}"
     echo -e "${CYAN}│${NC}       ${PURPLE}🔥 Foundry Launcher Menu 🔥 ${CYAN}${NC}"
@@ -215,8 +293,10 @@ main_menu() {
     echo -e "${CYAN}│${NC}  ${GREEN}3)${NC} ${WHITE}Run Forge Tests                                 ${CYAN}${NC}"
     echo -e "${CYAN}│${NC}  ${GREEN}4)${NC} ${WHITE}Create Contract on ${BLUE}Holesky${WHITE}       ${CYAN}${NC}"
     echo -e "${CYAN}│${NC}  ${GREEN}5)${NC} ${WHITE}Create Contract on ${BLUE}Sepolia${WHITE}       ${CYAN}${NC}"
-    echo -e "${CYAN}│${NC}  ${GREEN}6)${NC} ${WHITE}Script Deploy on ${BLUE}Holesky${WHITE}         ${CYAN}${NC}"
-    echo -e "${CYAN}│${NC}  ${GREEN}7)${NC} ${WHITE}Script Deploy on ${BLUE}Sepolia${WHITE}         ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}6)${NC} ${WHITE}Create Contract on ${BLUE}Anvil${WHITE}       ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}7)${NC} ${WHITE}Script Deploy on ${BLUE}Holesky${WHITE}         ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}8)${NC} ${WHITE}Script Deploy on ${BLUE}Sepolia${WHITE}         ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}9)${NC} ${WHITE}Script Deploy on ${BLUE}Anvil${WHITE}         ${CYAN}${NC}"
     echo -e "${CYAN}│${NC}  ${RED}0)${NC} ${WHITE}Exit                                              ${CYAN}${NC}"
     echo -e "${CYAN}└──────────────────────────────────────────┘${NC}"
 
@@ -229,8 +309,10 @@ main_menu() {
     3) fo_test ;;
     4) fo_create_holeksy ;;
     5) fo_create_sepolia ;;
-    6) fo_script_holeksy ;;
-    7) fo_script_sepolia ;;
+    6) fo_create_anvil ;;
+    7) fo_script_holeksy ;;
+    8) fo_script_sepolia ;;
+    9) fo_script_anvil ;;
     0)
         echo -e "${GREEN}👋 Exiting. Have a productive dev sesh!${NC}"
         exit 0
