@@ -112,6 +112,9 @@ fo_create_holeksy() {
         --rpc-url ${rpcz[1]} \
         --private-key ${keyz[0]} \
         --etherscan-api-key ${ETHERSCAN_API_KEY} \
+        --optimize true \
+        --optimizer-runs 999\
+        --build-info --build-info-path outz/ \
         --verify --broadcast \
         --out outz/"
 
@@ -141,6 +144,9 @@ fo_create_sepolia() {
     CO1="forge create ${CONTRACT_PATH} \
         --rpc-url ${rpcz[0]} \
         --private-key ${keyz[0]} \
+        --optimize true \
+        --optimizer-runs 999\
+        --build-info --build-info-path outz/ \
         --etherscan-api-key ${ETHERSCAN_API_KEY} \
         --verify --broadcast \
         --out outz/"
@@ -190,11 +196,14 @@ fo_create_anvil() {
 # Forge Script
 ################################################
 
+# Common Variables
+CONTRACT_PATH="script/DeploySimpleStorage.s.sol:DeploySimpleStorage"
+
 fo_script_holeksy() {
     hea1 "Foundry Script - One of contract deployment"
 
     LOG_FILE="logs/deploy_script._holesky.log"
-    CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
+
     mkdir -p logs
 
     echo -e "██╗  ██╗  ██████╗  ██╗      ███████╗ ███████╗ ██╗  ██╗ ██╗   ██╗"
@@ -207,6 +216,11 @@ fo_script_holeksy() {
     CO1="forge script ${CONTRACT_PATH} \
         --rpc-url ${rpcz[1]} \
         --private-key ${keyz[0]} \
+        --optimize true \
+        --optimizer-runs 999\
+        --build-info --build-info-path outz/ \
+        --etherscan-api-key ${ETHERSCAN_API_KEY} \
+        --verify \
         --broadcast \
         --out outz/"
 
@@ -223,7 +237,6 @@ fo_script_sepolia() {
     hea1 "Foundry Script - One of contract deployment"
 
     LOG_FILE="logs/deploy_script_sepolia.log"
-    CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
     mkdir -p logs
 
     echo -e "███████╗ ███████╗ ██████╗   ██████╗  ██╗      ██╗  █████╗ "
@@ -234,8 +247,13 @@ fo_script_sepolia() {
     echo -e "╚══════╝ ╚══════╝ ╚═╝       ╚═════╝  ╚══════╝ ╚═╝ ╚═╝  ╚═╝"
 
     CO1="forge script ${CONTRACT_PATH} \
-        --rpc-url ${rpcz[1]} \
+        --rpc-url ${rpcz[0]} \
         --private-key ${keyz[0]} \
+        --optimize true \
+        --optimizer-runs 999\
+        --build-info --build-info-path outz/ \
+        --etherscan-api-key ${ETHERSCAN_API_KEY} \
+        --verify \
         --broadcast \
         --out outz/"
 
@@ -250,8 +268,6 @@ fo_script_sepolia() {
 
 fo_script_anvil() {
     hea1 "Foundry Script - One of contract deployment"
-
-    CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
     LOG_FILE="logs/deploy_create_avil.log"
     mkdir -p logs
 
