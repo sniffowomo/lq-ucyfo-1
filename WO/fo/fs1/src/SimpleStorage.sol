@@ -3,26 +3,32 @@
 // SPDX-License-Identifier: SmellPanty
 pragma solidity ^0.8.19;
 
+// Initial Contract 
 contract SimpleStorage {
 
+    // Storage for the favNum
     uint256 myFavNum;
 
+    // Person Struct which will be reused
     struct Person {
         uint256 favNum;
         string name;
     }
 
+    // Init person struct 
     Person[] public listofPeople;
 
+    // Maps the name to the favNum
     mapping(string => uint256) public nameToFavNum;
 
+    // Storage Function of favnum
     function store(uint256 _myFavNum) public {
         myFavNum = _myFavNum;
     }
 
-
-
-
-
+    // Retrieveal function
+    function retrieve() public view returns (uint256) {
+        return myFavNum;
+    }
 
 }
