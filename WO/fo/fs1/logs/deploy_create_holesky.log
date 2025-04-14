@@ -34,3 +34,7 @@ Contract verification status:
 Response: `NOTOK`
 Details: `Pending in queue`
 Warning: Verification is still pending...; waiting 15 seconds before trying again (7 tries remaining)
+Contract verification status:
+Response: `OK`
+Details: `Pass - Verified`
+Contract successfully verified
