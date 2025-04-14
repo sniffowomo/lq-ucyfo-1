@@ -206,5 +206,41 @@ fo_script_sepolia() {
     echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
 }
 
-# Execution
-fo_script
+main_menu() {
+    echo -e "${CYAN}┌──────────────────────────────────────────┐${NC}"
+    echo -e "${CYAN}│${NC}       ${PURPLE}🔥 Foundry Launcher Menu 🔥 ${CYAN}${NC}"
+    echo -e "${CYAN}├──────────────────────────────────────────┤${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}1)${NC} ${WHITE}Full Foundry + Slither Setup ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}2)${NC} ${WHITE}Foundry Only Setup {CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}3)${NC} ${WHITE}Run Forge Tests                                 ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}4)${NC} ${WHITE}Create Contract on ${BLUE}Holesky${WHITE}       ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}5)${NC} ${WHITE}Create Contract on ${BLUE}Sepolia${WHITE}       ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}6)${NC} ${WHITE}Script Deploy on ${BLUE}Holesky${WHITE}         ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}7)${NC} ${WHITE}Script Deploy on ${BLUE}Sepolia${WHITE}         ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${RED}0)${NC} ${WHITE}Exit                                              ${CYAN}${NC}"
+    echo -e "${CYAN}└──────────────────────────────────────────┘${NC}"
+
+    echo -ne "${YELLOW}Enter your choice [0-7]: ${NC}"
+    read choice
+
+    case $choice in
+    1) foset ;;
+    2) fo_only ;;
+    3) fo_test ;;
+    4) fo_create_holeksy ;;
+    5) fo_create_sepolia ;;
+    6) fo_script_holeksy ;;
+    7) fo_script_sepolia ;;
+    0)
+        echo -e "${GREEN}👋 Exiting. Have a productive dev sesh!${NC}"
+        exit 0
+        ;;
+    *)
+        echo -e "${RED}❌ Invalid choice. Try again.${NC}"
+        exit 1
+        ;;
+    esac
+}
+
+# Run it
+main_menu
