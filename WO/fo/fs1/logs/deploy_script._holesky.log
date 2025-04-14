@@ -1,0 +1,31 @@
+Compiling 18 files with Solc 0.8.28
+Solc 0.8.28 finished in 665.28ms
+Compiler run successful!
+Script ran successfully.
+
+== Return ==
+0: contract SimpleStorage 0x73302F994a8c956b7f5DA4c703901375F0fca36B
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 17000
+
+Estimated gas price: 0.002200304 gwei
+
+Estimated total gas used for script: 705640
+
+Estimated amount required: 0.00000155262251456 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: /workspaces/lq-ucyfo-1/WO/fo/fs1/broadcast/DeploySimpleStorage.s.sol/17000/run-latest.json
+
+Sensitive values saved to: /workspaces/lq-ucyfo-1/WO/fo/fs1/cache/DeploySimpleStorage.s.sol/17000/run-latest.json
+
