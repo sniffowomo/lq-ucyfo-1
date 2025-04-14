@@ -2,6 +2,7 @@
 out/
 outz/
 log/
+logs/
 cache/
 broadcast/
 coverage/
