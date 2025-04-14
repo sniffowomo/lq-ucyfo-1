@@ -1,10 +1,8 @@
-Compiling 18 files with Solc 0.8.28
-Solc 0.8.28 finished in 665.28ms
-Compiler run successful!
+No files changed, compilation skipped
 Script ran successfully.
 
 == Return ==
-0: contract SimpleStorage 0x73302F994a8c956b7f5DA4c703901375F0fca36B
+0: contract SimpleStorage 0x02837bE12b77299d43933b8df8bCFeeC7f53EBb9
 
 ## Setting up 1 EVM.
 
@@ -24,8 +22,10 @@ Estimated amount required: 0.00000155262251456 ETH
 ==========================
 
 ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+##
+Start verification for (1) contracts
+Start verifying contract `0x02837bE12b77299d43933b8df8bCFeeC7f53EBb9` deployed on holesky
+Compiler version: 0.8.28
 
-Transactions saved to: /workspaces/lq-ucyfo-1/WO/fo/fs1/broadcast/DeploySimpleStorage.s.sol/17000/run-latest.json
-
-Sensitive values saved to: /workspaces/lq-ucyfo-1/WO/fo/fs1/cache/DeploySimpleStorage.s.sol/17000/run-latest.json
-
+Submitting verification for [src/SimpleStorage.sol:SimpleStorage] 0x02837bE12b77299d43933b8df8bCFeeC7f53EBb9.
+Warning: Etherscan could not detect the deployment.; waiting 5 seconds before trying again (4 tries remaining)

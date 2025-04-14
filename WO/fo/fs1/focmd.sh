@@ -210,6 +210,8 @@ fo_script_holeksy() {
     CO1="forge script ${CONTRACT_PATH} \
         --rpc-url ${rpcz[1]} \
         --private-key ${keyz[0]} \
+        --etherscan-api-key ${ETHERSCAN_API_KEY} \
+        --verify \
         --broadcast \
         --out outz/"
 
@@ -238,6 +240,8 @@ fo_script_sepolia() {
     CO1="forge script ${CONTRACT_PATH} \
         --rpc-url ${rpcz[1]} \
         --private-key ${keyz[0]} \
+        --etherscan-api-key ${ETHERSCAN_API_KEY} \
+        --verify \
         --broadcast \
         --out outz/"
 
