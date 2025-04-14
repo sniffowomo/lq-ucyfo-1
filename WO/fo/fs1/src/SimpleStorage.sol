@@ -3,9 +3,8 @@
 // SPDX-License-Identifier: SmellPanty
 pragma solidity ^0.8.19;
 
-// Initial Contract 
-contract SimpleStorage {
-
+// Initial Contract
+contract SimpleStorage { 
     // Storage for the favNum
     uint256 myFavNum;
 
@@ -15,7 +14,7 @@ contract SimpleStorage {
         string name;
     }
 
-    // Init person struct 
+    // Init person struct
     Person[] public listofPeople;
 
     // Maps the name to the favNum
@@ -32,9 +31,8 @@ contract SimpleStorage {
     }
 
     // Function for adding person
-    function addPerson(string memory _name, uint256 _favNum ) public {
+    function addPerson(string memory _name, uint256 _favNum) public {
         listofPeople.push(Person(_favNum, _name));
         nameToFavNum[_name] = _favNum;
     }
-
 }
