@@ -120,6 +120,36 @@ fo_create_holeksy() {
     echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
 }
 
+fo_create_sepolia() {
+    hea1 "Foundry Create - One of contract deployment"
+
+    CONTRACT_PATH="src/Counter.sol:Counter"
+    LOG_FILE="logs/deploy_create.log"
+    mkdir -p logs
+
+    echo -e "███████╗ ███████╗ ██████╗   ██████╗  ██╗      ██╗  █████╗ "
+    echo -e "██╔════╝ ██╔════╝ ██╔══██╗ ██╔═══██╗ ██║      ██║ ██╔══██╗"
+    echo -e "███████╗ █████╗   ██████╔╝ ██║   ██║ ██║      ██║ ███████║"
+    echo -e "╚════██║ ██╔══╝   ██╔═══╝  ██║   ██║ ██║      ██║ ██╔══██║"
+    echo -e "███████║ ███████╗ ██║      ╚██████╔╝ ███████╗ ██║ ██║  ██║"
+    echo -e "╚══════╝ ╚══════╝ ╚═╝       ╚═════╝  ╚══════╝ ╚═╝ ╚═╝  ╚═╝"
+
+    CO1="forge create ${CONTRACT_PATH} \
+        --rpc-url ${rpcz[0]} \
+        --private-key ${keyz[0]} \
+        --etherscan-api-key ${ETHERSCAN_API_KEY} \
+        --verify --broadcast \
+        --out outz/"
+
+    echo -e "${BLUE}Running: $CO1${NC}"
+
+    # Run and log to file
+    eval "$CO1" 2>&1 | tee "$LOG_FILE"
+
+    echo -e "${GREEN}Successfully deployed contract${NC}"
+    echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
+}
+
 fo_script_holeksy() {
     hea1 "Foundry Script - One of contract deployment"
 
@@ -132,6 +162,34 @@ fo_script_holeksy() {
     echo -e "██╔══██║ ██║   ██║ ██║      ██╔══╝   ╚════██║ ██╔═██╗    ╚██╔╝  "
     echo -e "██║  ██║ ╚██████╔╝ ███████╗ ███████╗ ███████║ ██║  ██╗    ██║   "
     echo -e "╚═╝  ╚═╝  ╚═════╝  ╚══════╝ ╚══════╝ ╚══════╝ ╚═╝  ╚═╝    ╚═╝   "
+
+    CO1="forge script script/Counter.s.sol:CounterScript \
+        --rpc-url ${rpcz[1]} \
+        --private-key ${keyz[0]} \
+        --broadcast \
+        --out outz/"
+
+    echo -e "${BLUE}Running: $CO1${NC}"
+
+    # Run and log to file
+    eval "$CO1" 2>&1 | tee "$LOG_FILE"
+
+    echo -e "${GREEN}Successfully deployed contract${NC}"
+    echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
+}
+
+fo_script_sepolia() {
+    hea1 "Foundry Script - One of contract deployment"
+
+    LOG_FILE="logs/deploy_script_sepolia.log"
+    mkdir -p logs
+
+    echo -e "███████╗ ███████╗ ██████╗   ██████╗  ██╗      ██╗  █████╗ "
+    echo -e "██╔════╝ ██╔════╝ ██╔══██╗ ██╔═══██╗ ██║      ██║ ██╔══██╗"
+    echo -e "███████╗ █████╗   ██████╔╝ ██║   ██║ ██║      ██║ ███████║"
+    echo -e "╚════██║ ██╔══╝   ██╔═══╝  ██║   ██║ ██║      ██║ ██╔══██║"
+    echo -e "███████║ ███████╗ ██║      ╚██████╔╝ ███████╗ ██║ ██║  ██║"
+    echo -e "╚══════╝ ╚══════╝ ╚═╝       ╚═════╝  ╚══════╝ ╚═╝ ╚═╝  ╚═╝"
 
     CO1="forge script script/Counter.s.sol:CounterScript \
         --rpc-url ${rpcz[1]} \
