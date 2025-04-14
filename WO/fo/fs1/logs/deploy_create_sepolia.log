@@ -1,0 +1,31 @@
+Compiling 2 files with Solc 0.8.28
+Solc 0.8.28 finished in 57.86ms
+Compiler run successful!
+Deployer: 0x420A8Fe13265Df3B9323C3D7681b2854B1309338
+Deployed to: 0x917B7734432C9a36988d267937112e817C144aa7
+Transaction hash: 0x55c417335c55b1c4bef197f35f6928c7fc845f9f149e9ee4080efb969b8c2157
+Starting contract verification...
+Waiting for sourcify to detect contract deployment...
+Start verifying contract `0x917B7734432C9a36988d267937112e817C144aa7` deployed on sepolia
+Compiler version: 0.8.28
+Optimizations:    999
+
+Submitting verification for [src/SimpleStorage.sol:SimpleStorage] 0x917B7734432C9a36988d267937112e817C144aa7.
+Warning: Etherscan could not detect the deployment.; waiting 5 seconds before trying again (4 tries remaining)
+
+Submitting verification for [src/SimpleStorage.sol:SimpleStorage] 0x917B7734432C9a36988d267937112e817C144aa7.
+Warning: Etherscan could not detect the deployment.; waiting 5 seconds before trying again (3 tries remaining)
+
+Submitting verification for [src/SimpleStorage.sol:SimpleStorage] 0x917B7734432C9a36988d267937112e817C144aa7.
+Submitted contract for verification:
+	Response: `OK`
+	GUID: `ityfdkb2scyczq1eab63fenfvqb62lvdjndqxepsyieqighbfu`
+	URL: https://sepolia.etherscan.io/address/0x917b7734432c9a36988d267937112e817c144aa7
+Contract verification status:
+Response: `NOTOK`
+Details: `Pending in queue`
+Warning: Verification is still pending...; waiting 15 seconds before trying again (7 tries remaining)
+Contract verification status:
+Response: `OK`
+Details: `Pass - Verified`
+Contract successfully verified

@@ -1,5 +1,7 @@
 # === Foundry ===
 out/
+outz/
+log/
 cache/
 broadcast/
 coverage/
