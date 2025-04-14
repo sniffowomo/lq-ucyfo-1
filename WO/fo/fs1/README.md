@@ -86,3 +86,6 @@ $ cast --help
 ```
 
 # Notez Section
+
+1. Foundry Simple Storage here 
+
