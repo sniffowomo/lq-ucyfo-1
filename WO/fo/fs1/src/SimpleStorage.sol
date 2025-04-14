@@ -31,4 +31,7 @@ contract SimpleStorage {
         return myFavNum;
     }
 
+    // Function for adding person
+    function addPerson(string memory _name, )
+
 }
