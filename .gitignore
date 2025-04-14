@@ -1,0 +1,29 @@
+# === Foundry ===
+out/
+cache/
+broadcast/
+coverage/
+
+# Forge standard output
+*.t.sol.json
+
+# Node modules (if using JS tooling alongside)
+node_modules/
+
+# Env files (optional)
+.env
+.env.*
+
+# VSCode & IDEs
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Misc
+*.swp
