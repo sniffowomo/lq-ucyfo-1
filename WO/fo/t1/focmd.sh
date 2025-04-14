@@ -90,7 +90,7 @@ fo_test() {
     eval "$CO1"
 }
 
-fo_create() {
+fo_create_holeksy() {
     hea1 "Foundry Create - One of contract deployment"
 
     CONTRACT_PATH="src/Counter.sol:Counter"
@@ -120,7 +120,7 @@ fo_create() {
     echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
 }
 
-fo_script() {
+fo_script_holeksy() {
     hea1 "Foundry Script - One of contract deployment"
 
     LOG_FILE="logs/deploy_script.log"
