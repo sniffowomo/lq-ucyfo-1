@@ -207,17 +207,21 @@ fo_script_sepolia() {
 }
 
 main_menu() {
-    echo -e "${YELLOW}Select an option:${NC}"
-    echo "1) Full Foundry + Slither Setup (foset)"
-    echo "2) Foundry Only Setup (fo_only)"
-    echo "3) Run Forge Tests (fo_test)"
-    echo "4) Create Contract on Holesky (fo_create_holeksy)"
-    echo "5) Create Contract on Sepolia (fo_create_sepolia)"
-    echo "6) Script Deploy on Holesky (fo_script_holeksy)"
-    echo "7) Script Deploy on Sepolia (fo_script_sepolia)"
-    echo "0) Exit"
+    echo -e "${CYAN}┌──────────────────────────────────────────┐${NC}"
+    echo -e "${CYAN}│${NC}       ${PURPLE}🔥 Foundry Launcher Menu 🔥      ${CYAN}│${NC}"
+    echo -e "${CYAN}├──────────────────────────────────────────┤${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}1)${NC} ${WHITE}Full Foundry + Slither Setup                    ${CYAN}│${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}2)${NC} ${WHITE}Foundry Only Setup                              ${CYAN}│${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}3)${NC} ${WHITE}Run Forge Tests                                 ${CYAN}│${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}4)${NC} ${WHITE}Create Contract on ${BLUE}Holesky${WHITE}       ${CYAN}│${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}5)${NC} ${WHITE}Create Contract on ${BLUE}Sepolia${WHITE}       ${CYAN}│${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}6)${NC} ${WHITE}Script Deploy on ${BLUE}Holesky${WHITE}         ${CYAN}│${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}7)${NC} ${WHITE}Script Deploy on ${BLUE}Sepolia${WHITE}         ${CYAN}│${NC}"
+    echo -e "${CYAN}│${NC}  ${RED}0)${NC} ${WHITE}Exit                                              ${CYAN}│${NC}"
+    echo -e "${CYAN}└──────────────────────────────────────────┘${NC}"
 
-    read -p "Enter your choice [0-7]: " choice
+    echo -ne "${YELLOW}Enter your choice [0-7]: ${NC}"
+    read choice
 
     case $choice in
     1) foset ;;
@@ -228,15 +232,15 @@ main_menu() {
     6) fo_script_holeksy ;;
     7) fo_script_sepolia ;;
     0)
-        echo -e "${GREEN}Exiting. Later skater! 🛹${NC}"
+        echo -e "${GREEN}👋 Exiting. Have a productive dev sesh!${NC}"
         exit 0
         ;;
     *)
-        echo -e "${RED}Invalid choice. Try again.${NC}"
+        echo -e "${RED}❌ Invalid choice. Try again.${NC}"
         exit 1
         ;;
     esac
 }
 
-# Call the menu once
+# Run it
 main_menu
