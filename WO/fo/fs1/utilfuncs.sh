@@ -27,11 +27,10 @@ h1() {
 ca1() {
     h1 "cast convert hexadecimal to function"
     TO_CONVERT="0xac468"
-    CO1="cast --to-base ${TO_CONVERT} --to-decimal"
+    CO1="cast --to-base ${TO_CONVERT} dec"
     echo -e "${GREEN}Command: ${NC}${CO1}"
-    echo -e "${GREEN}Output: ${NC}"
-    RESULT=(eval "$CO1")
-    echo -e "${GREEN}${TO_CONVERT} to decimal =$RESULT"
+    RESULT=$(eval "$CO1")
+    echo -e "${TO_CONVERT} to decimal = ${GREEN}$RESULT${NC}"
 }
 
 # Execution
