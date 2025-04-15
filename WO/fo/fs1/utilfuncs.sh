@@ -79,7 +79,32 @@ cast_send_anvil1() {
 }
 
 # Cast Send to Holesky
-cast_send_hole1() {
+cast_send_hol1() {
+    h1 "cast send to holeksy"
+
+    HOLE_DEPLOYED_CONTRACT="0x1E70089ccDf57818BD7f4A6B80b144403Ff99072"
+
+    # Main Command
+    CO1="cast send \
+    ${HOLE_DEPLOYED_CONTRACT} \
+    'store(uint256)' 31333333333337 \
+    --rpc-url ${rpcz[1]} \
+    --private-key ${keyz[0]} \
+    "
+
+    # Execution Sequence
+    echo -e "${GREEN}Command: ${NC}${CO1}"
+    RESULT=$(eval "$CO1")
+    {
+        echo "++++++++++++++++ $(date) ++++++++++++++++"
+        echo "Command: $CO1"
+        echo "Result: $RESULT"
+        echo "----------------------------------------"
+    } >>"./logs/cast_send_holesky.txt"
+    echo -e "${GREEN}Result: ${NC}${RESULT}"
+}
+
+cast_send_sep1() {
     h1 "cast send to holeksy"
 
     HOLE_DEPLOYED_CONTRACT="0x1E70089ccDf57818BD7f4A6B80b144403Ff99072"
