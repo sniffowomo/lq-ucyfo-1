@@ -189,7 +189,8 @@ fo_create_anvil() {
     echo -e "${GREEN}Successfully deployed contract${NC}"
     echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
 }
-fo_create_anvil() {
+
+fo_create_anvil_nochain() {
     hea1 "Foundry Create - One of contract deployment"
 
     LOG_FILE="logs/deploy_create_avil.log"
@@ -202,13 +203,7 @@ fo_create_anvil() {
     echo -e "██║  ██║ ██║ ╚████║  ╚████╔╝  ██║ ███████╗"
     echo -e "╚═╝  ╚═╝ ╚═╝  ╚═══╝   ╚═══╝   ╚═╝ ╚══════╝"
 
-    ANVIL_RPC="127.0.0.1:8545"
-    ANVIL_KEY="0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
-
     CO1="forge create ${CONTRACT_PATH_CREATE} \
-        --rpc-url  ${ANVIL_RPC}\
-        --private-key ${ANVIL_KEY} \
-        --broadcast \
         --out outz/"
 
     echo -e "${BLUE}Running: $CO1${NC}"
