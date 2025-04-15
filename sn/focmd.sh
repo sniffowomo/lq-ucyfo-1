@@ -93,7 +93,7 @@ fo_test() {
 ###############################################
 # Forge Create
 ################################################
-CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
+CONTRACT_PATH_CREATE="src/SimpleStorage.sol:SimpleStorage"
 
 fo_create_holeksy() {
     hea1 "Foundry Create - One of contract deployment"
@@ -108,7 +108,7 @@ fo_create_holeksy() {
     echo -e "██║  ██║ ╚██████╔╝ ███████╗ ███████╗ ███████║ ██║  ██╗    ██║   "
     echo -e "╚═╝  ╚═╝  ╚═════╝  ╚══════╝ ╚══════╝ ╚══════╝ ╚═╝  ╚═╝    ╚═╝   "
 
-    CO1="forge create ${CONTRACT_PATH} \
+    CO1="forge create ${CONTRACT_PATH_CREATE} \
         --rpc-url ${rpcz[1]} \
         --private-key ${keyz[0]} \
         --etherscan-api-key ${ETHERSCAN_API_KEY} \
@@ -140,7 +140,7 @@ fo_create_sepolia() {
     echo -e "███████║ ███████╗ ██║      ╚██████╔╝ ███████╗ ██║ ██║  ██║"
     echo -e "╚══════╝ ╚══════╝ ╚═╝       ╚═════╝  ╚══════╝ ╚═╝ ╚═╝  ╚═╝"
 
-    CO1="forge create ${CONTRACT_PATH} \
+    CO1="forge create ${CONTRACT_PATH_CREATE} \
         --rpc-url ${rpcz[0]} \
         --private-key ${keyz[0]} \
         --optimize true \
@@ -175,7 +175,7 @@ fo_create_anvil() {
     ANVIL_RPC="127.0.0.1:8545"
     ANVIL_KEY="0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
 
-    CO1="forge create ${CONTRACT_PATH} \
+    CO1="forge create ${CONTRACT_PATH_CREATE} \
         --rpc-url  ${ANVIL_RPC}\
         --private-key ${ANVIL_KEY} \
         --broadcast \
@@ -195,7 +195,7 @@ fo_create_anvil() {
 ################################################
 
 # Common Variables
-CONTRACT_PATH="script/DeploySimpleStorage.s.sol:DeploySimpleStorage"
+CONTRACT_PATH_SCRIPT="script/DeploySimpleStorage.s.sol:DeploySimpleStorage"
 
 fo_script_holeksy() {
     hea1 "Foundry Script - One of contract deployment"
@@ -211,7 +211,7 @@ fo_script_holeksy() {
     echo -e "██║  ██║ ╚██████╔╝ ███████╗ ███████╗ ███████║ ██║  ██╗    ██║   "
     echo -e "╚═╝  ╚═╝  ╚═════╝  ╚══════╝ ╚══════╝ ╚══════╝ ╚═╝  ╚═╝    ╚═╝   "
 
-    CO1="forge script ${CONTRACT_PATH} \
+    CO1="forge script ${CONTRACT_PATH_SCRIPT} \
         --rpc-url ${rpcz[1]} \
         --private-key ${keyz[0]} \
         --optimize true \
@@ -244,7 +244,7 @@ fo_script_sepolia() {
     echo -e "███████║ ███████╗ ██║      ╚██████╔╝ ███████╗ ██║ ██║  ██║"
     echo -e "╚══════╝ ╚══════╝ ╚═╝       ╚═════╝  ╚══════╝ ╚═╝ ╚═╝  ╚═╝"
 
-    CO1="forge script ${CONTRACT_PATH} \
+    CO1="forge script ${CONTRACT_PATH_SCRIPT} \
         --rpc-url ${rpcz[0]} \
         --private-key ${keyz[0]} \
         --optimize true \
@@ -279,7 +279,7 @@ fo_script_anvil() {
     ANVIL_RPC="127.0.0.1:8545"
     ANVIL_KEY="0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
 
-    CO1="forge script ${CONTRACT_PATH} \
+    CO1="forge script ${CONTRACT_PATH_SCRIPT} \
         --rpc-url ${ANVIL_RPC} \
         --private-key ${ANVIL_KEY} \
         --broadcast \
