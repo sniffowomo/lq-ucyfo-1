@@ -116,7 +116,8 @@ fo_create_holeksy() {
         --optimizer-runs 999\
         --build-info --build-info-path outz/ \
         --verify --broadcast \
-        --out outz/"
+        --out outz/ \
+        -vvvv"
 
     echo -e "${BLUE}Running: $CO1${NC}"
 
