@@ -143,6 +143,40 @@ cast_send_sep1() {
     echo -e "${GREEN}Result: ${NC}${RESULT}"
 }
 
+# //////////////// Cast retruieve function ////////////////
+
+cast_retrieve_hol1() {
+    h1 "cast send to holeksy"
+
+    echo -e "██╗  ██╗  ██████╗  ██╗      ███████╗ ███████╗ ██╗  ██╗ ██╗   ██╗"
+    echo -e "██║  ██║ ██╔═══██╗ ██║      ██╔════╝ ██╔════╝ ██║ ██╔╝ ╚██╗ ██╔╝"
+    echo -e "███████║ ██║   ██║ ██║      █████╗   ███████╗ █████╔╝   ╚████╔╝ "
+    echo -e "██╔══██║ ██║   ██║ ██║      ██╔══╝   ╚════██║ ██╔═██╗    ╚██╔╝  "
+    echo -e "██║  ██║ ╚██████╔╝ ███████╗ ███████╗ ███████║ ██║  ██╗    ██║   "
+    echo -e "╚═╝  ╚═╝  ╚═════╝  ╚══════╝ ╚══════╝ ╚══════╝ ╚═╝  ╚═╝    ╚═╝   "
+
+    HOLE_DC="0x1E70089ccDf57818BD7f4A6B80b144403Ff99072"
+
+    # Main Command
+    CO1="cast call \
+    ${HOLE_DC} \
+    'retrieve()' \
+    --rpc-url ${rpcz[1]} \
+    "
+
+    # Execution Sequence
+    echo -e "${GREEN}Command: ${NC}${CO1}"
+    RESULT=$(eval "$CO1")
+    {
+        echo "++++++++++++++++ $(date) ++++++++++++++++"
+        echo "Command: $CO1"
+        echo "Result: $RESULT"
+        echo "----------------------------------------"
+    } >>"./logs/cast_retrieve_holesky1.txt"
+    echo -e "${GREEN}Result: ${NC}${RESULT}"
+}
+
 # Execution
-cast_send_hol1
+# cast_send_hol1
 # cast_send_sep1
+cast_retrieve_hol1
