@@ -30,7 +30,9 @@ ca1() {
     CO1="cast --to-base ${TO_CONVERT} --to-decimal"
     echo -e "${GREEN}Command: ${NC}${CO1}"
     echo -e "${GREEN}Output: ${NC}"
-    eval $CO1
+    RESULT=(eval "$CO1")
+    echo -e "${GREEN}${TO_CONVERT} to decimal =$RESULT"
 }
 
 # Execution
+ca1
