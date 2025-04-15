@@ -82,11 +82,11 @@ cast_send_anvil1() {
 cast_send_hol1() {
     h1 "cast send to holeksy"
 
-    HOLE_DEPLOYED_CONTRACT="0x1E70089ccDf57818BD7f4A6B80b144403Ff99072"
+    HOLE_DC="0x1E70089ccDf57818BD7f4A6B80b144403Ff99072"
 
     # Main Command
     CO1="cast send \
-    ${HOLE_DEPLOYED_CONTRACT} \
+    ${HOLE_DC} \
     'store(uint256)' 31333333333337 \
     --rpc-url ${rpcz[1]} \
     --private-key ${keyz[0]} \
@@ -100,20 +100,20 @@ cast_send_hol1() {
         echo "Command: $CO1"
         echo "Result: $RESULT"
         echo "----------------------------------------"
-    } >>"./logs/cast_send_holesky.txt"
+    } >>"./logs/cast_send_holesky1.txt"
     echo -e "${GREEN}Result: ${NC}${RESULT}"
 }
 
 cast_send_sep1() {
     h1 "cast send to holeksy"
 
-    HOLE_DEPLOYED_CONTRACT="0x1E70089ccDf57818BD7f4A6B80b144403Ff99072"
+    SEP_DC="0x22E143A618AdeadE32ae9B729Aa2254Ef02fe544"
 
     # Main Command
     CO1="cast send \
-    ${HOLE_DEPLOYED_CONTRACT} \
+    ${SEP_DC} \
     'store(uint256)' 31333333333337 \
-    --rpc-url ${rpcz[1]} \
+    --rpc-url ${rpcz[0]} \
     --private-key ${keyz[0]} \
     "
 
@@ -125,9 +125,10 @@ cast_send_sep1() {
         echo "Command: $CO1"
         echo "Result: $RESULT"
         echo "----------------------------------------"
-    } >>"./logs/cast_send_holesky.txt"
+    } >>"./logs/cast_send_sepolia1.txt"
     echo -e "${GREEN}Result: ${NC}${RESULT}"
 }
 
 # Execution
-cast_send_hole1
+# cast_send_hole1
+cast_send_sep1
