@@ -375,11 +375,11 @@ main_menu() {
     4) fo_create_holeksy ;;
     5) fo_create_sepolia ;;
     6) fo_create_anvil ;;
-    6) fo_create_anvil ;;
-    7) fo_script_holeksy ;;
-    8) fo_script_sepolia ;;
-    9) fo_script_anvil ;;
-    9) fo_script_anvil ;;
+    7) fo_create_anvil_nochain ;;
+    8) fo_script_holeksy ;;
+    9) fo_script_sepolia ;;
+    10) fo_script_anvil ;;
+    11) fo_script_anvil_nochain ;;
     0)
         echo -e "${GREEN}👋 Exiting. Have a productive dev sesh!${NC}"
         exit 0
