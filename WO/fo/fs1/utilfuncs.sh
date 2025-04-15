@@ -161,8 +161,8 @@ cast_retrieve_hol1() {
     CO1="cast call \
     ${HOLE_DC} \
     'retrieve()' \
-    --rpc-url ${rpcz[1]} \
-    "
+    --rpc-url ${rpcz[1]}  \
+    | cast --to-dec"
 
     # Execution Sequence
     echo -e "${GREEN}Command: ${NC}${CO1}"
