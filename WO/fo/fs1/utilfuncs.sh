@@ -50,7 +50,7 @@ ca1() {
 }
 
 # Using cast to interact with accounts
-cast_send1() {
+cast_send_anvil1() {
     h1 "cast send to interact with contracts"
 
     # Important Vars
@@ -76,7 +76,32 @@ cast_send1() {
         echo "----------------------------------------"
     } >>"./logs/cast_send.txt"
     echo -e "${GREEN}Result: ${NC}${RESULT}"
+}
 
+# Cast Send to Holesky
+cast_send_hole1() {
+    h1 "cast send to holeksy"
+
+    HOLE_DEPLOYED_CONTRACT=""
+
+    # Main Command
+    CO1="cast send \
+    ${DEPLOYED_CONTRACT_ANVIL} \
+    'store(uint256)' 69 \
+    --rpc-url ${ANVIL_URL} \
+    --private-key ${ANVIL_PK1} \
+    "
+
+    # Execution Sequence
+    echo -e "${GREEN}Command: ${NC}${CO1}"
+    RESULT=$(eval "$CO1")
+    {
+        echo "++++++++++++++++ $(date) ++++++++++++++++"
+        echo "Command: $CO1"
+        echo "Result: $RESULT"
+        echo "----------------------------------------"
+    } >>"./logs/cast_send.txt"
+    echo -e "${GREEN}Result: ${NC}${RESULT}"
 }
 
 # Execution
