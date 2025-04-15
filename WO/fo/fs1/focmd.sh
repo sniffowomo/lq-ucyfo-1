@@ -93,11 +93,11 @@ fo_test() {
 ###############################################
 # Forge Create
 ################################################
+CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
 
 fo_create_holeksy() {
     hea1 "Foundry Create - One of contract deployment"
 
-    CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
     LOG_FILE="logs/deploy_create_holesky.log"
     mkdir -p logs
 
@@ -130,7 +130,6 @@ fo_create_holeksy() {
 fo_create_sepolia() {
     hea1 "Foundry Create - One of contract deployment"
 
-    CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
     LOG_FILE="logs/deploy_create_sepolia.log"
     mkdir -p logs
 
@@ -163,7 +162,6 @@ fo_create_sepolia() {
 fo_create_anvil() {
     hea1 "Foundry Create - One of contract deployment"
 
-    CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
     LOG_FILE="logs/deploy_create_avil.log"
     mkdir -p logs
 
@@ -281,7 +279,7 @@ fo_script_anvil() {
     ANVIL_RPC="127.0.0.1:8545"
     ANVIL_KEY="0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
 
-    CO1="forge create ${CONTRACT_PATH} \
+    CO1="forge script ${CONTRACT_PATH} \
         --rpc-url ${ANVIL_RPC} \
         --private-key ${ANVIL_KEY} \
         --broadcast \

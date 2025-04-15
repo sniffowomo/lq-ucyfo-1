@@ -279,7 +279,7 @@ fo_script_anvil() {
     ANVIL_RPC="127.0.0.1:8545"
     ANVIL_KEY="0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
 
-    CO1="forge create ${CONTRACT_PATH} \
+    CO1="forge script ${CONTRACT_PATH} \
         --rpc-url ${ANVIL_RPC} \
         --private-key ${ANVIL_KEY} \
         --broadcast \
