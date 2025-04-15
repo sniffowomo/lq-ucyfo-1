@@ -8,7 +8,6 @@ import {SimpleStorage} from "../src/SimpleStorage.sol";
 
 contract DeploySimpleStorage is Script {
     function run() external returns (SimpleStorage) {
-        
         // Foundry CheatCode - https://book.getfoundry.sh/cheatcodes/
         vm.startBroadcast();
 
