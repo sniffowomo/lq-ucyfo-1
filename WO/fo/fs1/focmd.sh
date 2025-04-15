@@ -358,7 +358,7 @@ main_menu() {
     echo -e "${CYAN}│${NC}  ${GREEN}5)${NC} ${WHITE}Create Contract on ${BLUE}Sepolia${WHITE}       ${CYAN}${NC}"
     echo -e "${CYAN}│${NC}  ${GREEN}6)${NC} ${WHITE}Create Contract on ${BLUE}Anvil${WHITE}       ${CYAN}${NC}"
     echo -e "${CYAN}│${NC}  ${GREEN}7)${NC} ${WHITE}Create Contract on ${BLUE}Anvil-NoChain${WHITE}       ${CYAN}${NC}"
-    echo -e "${CYAN}│${NC}  ${GREEN}7)${NC} ${WHITE}Script Deploy on ${BLUE}Holesky${WHITE}         ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}8)${NC} ${WHITE}Script Deploy on ${BLUE}Holesky${WHITE}         ${CYAN}${NC}"
     echo -e "${CYAN}│${NC}  ${GREEN}9)${NC} ${WHITE}Script Deploy on ${BLUE}Sepolia${WHITE}         ${CYAN}${NC}"
     echo -e "${CYAN}│${NC}  ${GREEN}10)${NC} ${WHITE}Script Deploy on ${BLUE}Anvil${WHITE}         ${CYAN}${NC}"
     echo -e "${CYAN}│${NC}  ${GREEN}11)${NC} ${WHITE}Script Deploy on ${BLUE}Anvil-NoChain${WHITE}         ${CYAN}${NC}"
