@@ -176,6 +176,13 @@ cast_retrieve_hol1() {
     echo -e "${GREEN}Result: ${NC}${RESULT}"
 }
 
+# Looper Function
+panty_loope() {
+    for i in {1..5}; do
+        cast_send_hol1
+    done
+}
+
 # Execution
 # cast_send_hol1
 # cast_send_sep1
