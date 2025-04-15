@@ -87,7 +87,7 @@ cast_send_hole1() {
     # Main Command
     CO1="cast send \
     ${HOLE_DEPLOYED_CONTRACT} \
-    'store(uint256)' 69 \
+    'store(uint256)' 31333333333337 \
     --rpc-url ${rpcz[1]} \
     --private-key ${keyz[0]} \
     "
