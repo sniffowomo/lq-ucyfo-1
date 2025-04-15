@@ -94,7 +94,7 @@ cast_send_hol1() {
     # Main Command
     CO1="cast send \
     ${HOLE_DC} \
-    'store(uint256)' 31333333333337 \
+    'retrieve()' \
     --rpc-url ${rpcz[1]} \
     --private-key ${keyz[0]} \
     "
@@ -145,4 +145,4 @@ cast_send_sep1() {
 
 # Execution
 cast_send_hol1
-cast_send_sep1
+# cast_send_sep1
