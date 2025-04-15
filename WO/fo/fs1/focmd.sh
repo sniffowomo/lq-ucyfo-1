@@ -319,6 +319,30 @@ fo_script_anvil() {
     echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
 }
 
+fo_script_anvil_nochain() {
+    hea1 "Foundry Script - One of contract deployment"
+    LOG_FILE="logs/deploy_create_avil.log"
+    mkdir -p logs
+
+    echo -e " █████╗  ███╗   ██╗ ██╗   ██╗ ██╗ ██╗     "
+    echo -e "██╔══██╗ ████╗  ██║ ██║   ██║ ██║ ██║     "
+    echo -e "███████║ ██╔██╗ ██║ ██║   ██║ ██║ ██║     "
+    echo -e "██╔══██║ ██║╚██╗██║ ╚██╗ ██╔╝ ██║ ██║     "
+    echo -e "██║  ██║ ██║ ╚████║  ╚████╔╝  ██║ ███████╗"
+    echo -e "╚═╝  ╚═╝ ╚═╝  ╚═══╝   ╚═══╝   ╚═╝ ╚══════╝"
+
+    CO1="forge script ${CONTRACT_PATH_SCRIPT} \
+        --out outz/"
+
+    echo -e "${BLUE}Running: $CO1${NC}"
+
+    # Run and log to file
+    eval "$CO1" 2>&1 | tee "$LOG_FILE"
+
+    echo -e "${GREEN}Successfully deployed contract${NC}"
+    echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
+}
+
 ###############################################
 # Manual
 ################################################
@@ -333,9 +357,11 @@ main_menu() {
     echo -e "${CYAN}│${NC}  ${GREEN}4)${NC} ${WHITE}Create Contract on ${BLUE}Holesky${WHITE}       ${CYAN}${NC}"
     echo -e "${CYAN}│${NC}  ${GREEN}5)${NC} ${WHITE}Create Contract on ${BLUE}Sepolia${WHITE}       ${CYAN}${NC}"
     echo -e "${CYAN}│${NC}  ${GREEN}6)${NC} ${WHITE}Create Contract on ${BLUE}Anvil${WHITE}       ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}7)${NC} ${WHITE}Create Contract on ${BLUE}Anvil-NoChain${WHITE}       ${CYAN}${NC}"
     echo -e "${CYAN}│${NC}  ${GREEN}7)${NC} ${WHITE}Script Deploy on ${BLUE}Holesky${WHITE}         ${CYAN}${NC}"
-    echo -e "${CYAN}│${NC}  ${GREEN}8)${NC} ${WHITE}Script Deploy on ${BLUE}Sepolia${WHITE}         ${CYAN}${NC}"
-    echo -e "${CYAN}│${NC}  ${GREEN}9)${NC} ${WHITE}Script Deploy on ${BLUE}Anvil${WHITE}         ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}9)${NC} ${WHITE}Script Deploy on ${BLUE}Sepolia${WHITE}         ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}10)${NC} ${WHITE}Script Deploy on ${BLUE}Anvil${WHITE}         ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}11)${NC} ${WHITE}Script Deploy on ${BLUE}Anvil-NoChain${WHITE}         ${CYAN}${NC}"
     echo -e "${CYAN}│${NC}  ${RED}0)${NC} ${WHITE}Exit                                              ${CYAN}${NC}"
     echo -e "${CYAN}└──────────────────────────────────────────┘${NC}"
 
@@ -349,8 +375,10 @@ main_menu() {
     4) fo_create_holeksy ;;
     5) fo_create_sepolia ;;
     6) fo_create_anvil ;;
+    6) fo_create_anvil ;;
     7) fo_script_holeksy ;;
     8) fo_script_sepolia ;;
+    9) fo_script_anvil ;;
     9) fo_script_anvil ;;
     0)
         echo -e "${GREEN}👋 Exiting. Have a productive dev sesh!${NC}"
