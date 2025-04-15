@@ -93,11 +93,11 @@ fo_test() {
 ###############################################
 # Forge Create
 ################################################
+CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
 
 fo_create_holeksy() {
     hea1 "Foundry Create - One of contract deployment"
 
-    CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
     LOG_FILE="logs/deploy_create_holesky.log"
     mkdir -p logs
 
@@ -130,7 +130,6 @@ fo_create_holeksy() {
 fo_create_sepolia() {
     hea1 "Foundry Create - One of contract deployment"
 
-    CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
     LOG_FILE="logs/deploy_create_sepolia.log"
     mkdir -p logs
 
@@ -163,7 +162,6 @@ fo_create_sepolia() {
 fo_create_anvil() {
     hea1 "Foundry Create - One of contract deployment"
 
-    CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
     LOG_FILE="logs/deploy_create_avil.log"
     mkdir -p logs
 
