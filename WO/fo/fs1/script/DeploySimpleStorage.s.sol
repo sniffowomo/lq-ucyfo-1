@@ -11,9 +11,10 @@ contract DeploySimpleStorage is Script {
         // Foundry CheatCode - https://book.getfoundry.sh/cheatcodes/
         vm.startBroadcast();
 
+        // Storing the deployed contract address in a variable
         SimpleStorage simpleStorage = new SimpleStorage();
 
-        vm.stopBroadcast();
+        vm.stopBroadcast(); // Foundry Cheat Code
 
         return simpleStorage;
     }
