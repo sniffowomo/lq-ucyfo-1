@@ -94,7 +94,7 @@ cast_send_hol1() {
     # Main Command
     CO1="cast send \
     ${HOLE_DC} \
-    'retrieve()' \
+    'store(uint256)' 666999 \
     --rpc-url ${rpcz[1]} \
     --private-key ${keyz[0]} \
     "
