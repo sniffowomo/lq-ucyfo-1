@@ -26,7 +26,11 @@ h1() {
 # Cast function to convert hex to decimal
 ca1() {
     h1 "cast convert hexadecimal to function"
-    TO_CONVERT=$1
+    TO_CONVERT="0xac468"
+    CO1="cast --to-base ${TO_CONVERT} --to-decimal"
+    echo -e "${GREEN}Command: ${NC}${CO1}"
+    echo -e "${GREEN}Output: ${NC}"
+    eval $CO1
 }
 
 # Execution
