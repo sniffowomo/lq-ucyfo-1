@@ -102,7 +102,7 @@ fo_verify_zksep() {
     CO1="forge verify-contract ${CONTRACT_ADDRESS} ${CONTRACT_PATH} \
         --verifier zksync \
         --verifier-url https://explorer.sepolia.era.zksync.dev/contract_verification \
-        --compiler-version 0.8.19 \
+         --compiler-version 1.3.13 \
         --num-of-optimizations 200000 \
         --watch"
 
