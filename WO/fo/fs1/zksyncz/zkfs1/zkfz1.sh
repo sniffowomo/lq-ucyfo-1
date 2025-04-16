@@ -33,9 +33,15 @@ install_zksync() {
 # building for zksync
 build_zk() {
     h1 "Building Forge Zksync Project"
+
+    # Setup Logs Directory
+    mkdir -p logs
+    LOG_FILE="logs/build_zk.log"
+
+    # Execute Build
     CO1="forge build --zksync -vvvvv"
     echo -e "${GREEN}Command: ${NC}${CO1}"
-    eval "$CO1"
+    eval "$CO1" 2>&1 | tee "$LOG_FILE"
 }
 
 # Execution
