@@ -109,7 +109,7 @@ fo_create_holeksy() {
     echo -e "╚═╝  ╚═╝  ╚═════╝  ╚══════╝ ╚══════╝ ╚══════╝ ╚═╝  ╚═╝    ╚═╝   "
 
     CO1="forge create ${CONTRACT_PATH_CREATE} \
-        --constructor-args 10e18 \
+        --constructor-args 10000000000000000000 \
         --rpc-url ${rpcz[1]} \
         --private-key ${keyz[0]} \
         --etherscan-api-key ${ETHERSCAN_API_KEY} \
