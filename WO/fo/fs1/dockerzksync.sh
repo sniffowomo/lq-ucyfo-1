@@ -30,5 +30,11 @@ dock_setup() {
     eval "$CO1"
 }
 
+docker_getin() {
+    h1 "Setup Docker to run with zksync"
+    CO1="docker ps -a"
+    CO2=""
+}
+
 # Execution
 dock_setup
