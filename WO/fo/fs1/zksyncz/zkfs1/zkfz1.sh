@@ -100,18 +100,21 @@ fo_verify_zksep() {
     echo -e "~~~~ZK ERA SEPOLIA VERIFY~~~~~"
 
     CO1="forge verify-contract ${CONTRACT_ADDRESS} ${CONTRACT_PATH} \
-    --verifier zksync \
-    --verifier-url https://explorer.sepolia.era.zksync.dev/contract_verification \
-    --compiler-version 0.8.19"
+        --verifier zksync \
+        --verifier-url https://explorer.sepolia.era.zksync.dev/contract_verification \
+        --compiler-version 0.8.19 \
+        --num-of-optimizations 200 \
+        --watch"
 
-    echo -e "${BLUE}Running: $CO1${NC}"
+    echo -e \"${BLUE}Running: $CO1${NC}\"
 
     # Run and log to file
-    eval "$CO1" 2>&1 | tee "$LOG_FILE"
+    eval \"$CO1\" 2>&1 | tee \"$LOG_FILE\"
 
-    echo -e "${GREEN}Successfully verified contract${NC}"
-    echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
+    echo -e \"${GREEN}Successfully initiated verification${NC}\"
+    echo -e \"${YELLOW}Log saved to $LOG_FILE${NC}\"
 }
+
 
 # Execution
 fo_create_zksep
