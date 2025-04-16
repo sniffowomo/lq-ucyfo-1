@@ -44,5 +44,10 @@ build_zk() {
     eval "$CO1" 2>&1 | tee "$LOG_FILE"
 }
 
+# Deploy Zkysnc
+deploy_zk() {
+
+}
+
 # Execution
 build_zk
