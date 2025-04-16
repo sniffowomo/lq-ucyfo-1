@@ -118,7 +118,6 @@ fo_create_holeksy() {
         --build-info --build-info-path outz/ \
         --verify --broadcast \
         --out outz/ \
-        --constructor-args ${TOKEN_AMT} \
         -vvvv"
 
     echo -e "${BLUE}Running: $CO1${NC}"
@@ -223,7 +222,7 @@ fo_create_anvil_nochain() {
 ################################################
 
 # Common Variables
-CONTRACT_PATH_CREATE="src/Counter.sol:Counter"
+CONTRACT_PATH_SCRIPT="script/Counter.s.sol:CounterScript"
 
 fo_script_holeksy() {
     hea1 "Foundry Script - One of contract deployment"
