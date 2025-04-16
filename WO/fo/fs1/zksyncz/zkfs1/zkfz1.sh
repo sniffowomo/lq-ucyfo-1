@@ -109,10 +109,10 @@ fo_verify_zksep() {
 
     echo -e \"${BLUE}Running: \$CO1${NC}\"
 
-    eval \"\$CO1\" 2>&1 | tee \"\$LOG_FILE\"
+    eval "$CO1" 2>&1 | tee "$LOG_FILE"
 
-    echo -e \"${GREEN}Successfully verified contract${NC}\"
-    echo -e \"${YELLOW}Log saved to \$LOG_FILE${NC}\"
+    echo -e "${GREEN}Successfully deployed contract${NC}"
+    echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
 }
 
 
