@@ -23,3 +23,9 @@ Link | What
 
 > [!CAUTION]
 > Fucklin shit Zksync , doesn work int he normal CP , you need the docker to make ass fucking. Smell her armpits and pussy
+
+# L2Fees
+
+Site | What 
+:--: | :--:
+[`L2Fees`](https://l2fees.info/) | Website that shows the fees on various chains. Note shit is expensive
