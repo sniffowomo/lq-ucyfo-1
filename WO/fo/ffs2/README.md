@@ -64,3 +64,10 @@ $ forge --help
 $ anvil --help
 $ cast --help
 ```
+
+# External Resources 
+
+1. List of external resources referenced in the course 
+
+Repo | Description
+:--: | :--:
