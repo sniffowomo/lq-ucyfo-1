@@ -1,14 +1,18 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-import {Script} from "forge-std/Script.sol";
-import {BootySniff} from "../src/BootySniff.sol";
+import {Script, console} from "forge-std/Script.sol";
+import {Counter} from "../src/Counter.sol";
 
-contract BootyDeploy is Script {
+contract CounterScript is Script {
+    Counter public counter;
+
+    function setUp() public {}
+
     function run() public {
         vm.startBroadcast();
 
-        BootySniff booty = new BootySniff();
+        counter = new Counter();
 
         vm.stopBroadcast();
     }
