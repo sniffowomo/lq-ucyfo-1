@@ -117,5 +117,5 @@ fo_verify_zksep() {
 
 
 # Execution
-# fo_create_zksep
-fo_verify_zksep
+fo_create_zksep
+# fo_verify_zksep
