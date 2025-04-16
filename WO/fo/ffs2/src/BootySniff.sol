@@ -6,8 +6,8 @@ import {IERC20} from "fi/IERC20.sol";
 // import {Test, console} from "forge-std/Test.sol";
 
 contract BootyToken is IERC20 {
-    string private _name = "MyToken";
-    string private _symbol = "MTK";
+    string private _name = "SmellBooty";
+    string private _symbol = "SMLLBTY";
     uint8 private _decimals = 18;
     uint256 private _totalSupply;
 
