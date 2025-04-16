@@ -5,14 +5,14 @@ import {Script, console} from "forge-std/Script.sol";
 import {BootySniff} from "../src/Counter.sol";
 
 contract BootySniff is Script {
-    BootySniff public bootysniff;
+    BootySniff public booty;
 
     function setUp() public {}
 
     function run() public {
         vm.startBroadcast();
 
-        bootysniff = new bootysniff();
+        booty = new BootySniff();
 
         vm.stopBroadcast();
     }
