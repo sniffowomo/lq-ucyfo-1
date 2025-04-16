@@ -8,8 +8,8 @@ contract CounterTest is Test {
     BootySniff public bootysniff;
 
     function setUp() public {
-    bootysniff = new BootySniff();
-    bootysniff.setNumber(0);
+        bootysniff = new BootySniff();
+        bootysniff.setNumber(0);
     }
 
     function test_Increment() public {

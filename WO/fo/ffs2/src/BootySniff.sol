@@ -14,7 +14,15 @@ contract BootyToken is IERC20 {
     mapping(address => uint256) private _balances;
     mapping(address => mapping(address => uint256)) private _allowances;
 
+    address public owner;
+
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Not authorized");
+        _;
+    }
+
     constructor(uint256 initialSupply) {
+        owner = msg.sender;
         _mint(msg.sender, initialSupply * (10 ** uint256(_decimals)));
     }
 
