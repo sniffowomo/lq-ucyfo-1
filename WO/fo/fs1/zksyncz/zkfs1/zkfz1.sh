@@ -45,14 +45,16 @@ build_zk() {
 }
 
 # Deploy Zkysnc
-fo_create_sepolia() {
+fo_create_zksep() {
     hea1 "Zksync Deploy"
 
-    LOG_FILE="logs/deploy_create_sepolia.log"
+    LOG_FILE="logs/deploy_create_zksync.log"
     mkdir -p logs
 
     rpz="https://zksync-sepolia.g.alchemy.com/v2/YfG5-esHajH3FpsLvC4eMFMEFYl9Lqcg"
     keyz1="0x6890220d6cc0218032cab963a528672d85643a2c7edf340de6e27861d1900958"
+    ETHERSCAN_API_KEY="2JEANQYC4C9S6PKDFWNGVT2UER24T32D2M"
+    CONTRACT_PATH_CREATE="src/SimpleStorage.sol:SimpleStorage"
 
     echo -e "~~~~ZK ERA SEPOLI DEPLOY~~~~~"
     echo -e "~~~~ZK ERA SEPOLI DEPLOY~~~~~"
@@ -63,11 +65,16 @@ fo_create_sepolia() {
         --rpc-url ${rpz} \
         --private-key ${keyz1} \
         --optimize true \
-        --optimizer-runs 999\
+        --optimizer-runs 999 \
         --build-info --build-info-path outz/ \
-        --etherscan-api-key ${ETHERSCAN_API_KEY} \
-        --verify --broadcast \
-        --out outz/"
+        --verify --verifier zksync \
+        --verifier-url https://zksync2-mainnet-explorer.zksync.io/contract_verification \
+        --broadcast \
+        --out outz/ \
+        --zk-startup \
+        --zk-compile \
+        --zk-optimizer \
+        --zk-optimizer-mode 3"
 
     echo -e "${BLUE}Running: $CO1${NC}"
 
@@ -78,5 +85,34 @@ fo_create_sepolia() {
     echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
 }
 
+fo_verify_zksep() {
+    hea1 "Zksync Verify"
+
+    LOG_FILE="logs/verify_zksync.log"
+    mkdir -p logs
+
+    CONTRACT_ADDRESS="0xCd839f4f7F803d3945E37D24e7C48a5eba312ea3"
+    CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
+
+    echo -e "~~~~ZK ERA SEPOLIA VERIFY~~~~~"
+    echo -e "~~~~ZK ERA SEPOLIA VERIFY~~~~~"
+    echo -e "~~~~ZK ERA SEPOLIA VERIFY~~~~~"
+    echo -e "~~~~ZK ERA SEPOLIA VERIFY~~~~~"
+
+    CO1="forge verify-contract ${CONTRACT_ADDRESS} ${CONTRACT_PATH} \
+    --verifier zksync \
+    --verifier-url https://explorer.sepolia.era.zksync.dev/contract_verification \
+    --compiler-version 0.8.19"
+
+    echo -e "${BLUE}Running: $CO1${NC}"
+
+    # Run and log to file
+    eval "$CO1" 2>&1 | tee "$LOG_FILE"
+
+    echo -e "${GREEN}Successfully verified contract${NC}"
+    echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
+}
+
 # Execution
-build_zk
+# fo_create_zksep
+fo_verify_zksep
