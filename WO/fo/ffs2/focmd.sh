@@ -117,6 +117,7 @@ fo_create_holeksy() {
         --build-info --build-info-path outz/ \
         --verify --broadcast \
         --out outz/ \
+        --constructor-args 100000000000000000 \
         -vvvv"
 
     echo -e "${BLUE}Running: $CO1${NC}"
