@@ -31,3 +31,4 @@ install_zksync() {
 }
 
 # Execution
+install_zksync
