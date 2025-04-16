@@ -71,3 +71,4 @@ $ cast --help
 
 Repo | Description
 :--: | :--:
+[`Chainlink-Brownie-Contracts`](https://github.com/smartcontractkit/chainlink-brownie-contracts) | Imports referenced
