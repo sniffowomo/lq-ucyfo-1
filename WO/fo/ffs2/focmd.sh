@@ -93,7 +93,7 @@ fo_test() {
 ###############################################
 # Forge Create
 ################################################
-CONTRACT_PATH_CREATE="src/SimpleStorage.sol:SimpleStorage"
+CONTRACT_PATH_CREATE="src/Counter.sol:Counter"
 
 fo_create_holeksy() {
     hea1 "Foundry Create - One of contract deployment"
@@ -221,7 +221,7 @@ fo_create_anvil_nochain() {
 ################################################
 
 # Common Variables
-CONTRACT_PATH_SCRIPT="script/DeploySimpleStorage.s.sol:DeploySimpleStorage"
+CONTRACT_PATH_SCRIPT="script/Counter.s.sol:pantySmell"
 
 fo_script_holeksy() {
     hea1 "Foundry Script - One of contract deployment"
