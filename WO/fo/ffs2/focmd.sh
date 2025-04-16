@@ -99,6 +99,7 @@ fo_create_holeksy() {
     hea1 "Foundry Create - One of contract deployment"
 
     LOG_FILE="logs/deploy_create_holesky.log"
+    TOKEN_AMT="1000000000000000000000"
     mkdir -p logs
 
     echo -e "██╗  ██╗  ██████╗  ██╗      ███████╗ ███████╗ ██╗  ██╗ ██╗   ██╗"
@@ -117,7 +118,7 @@ fo_create_holeksy() {
         --build-info --build-info-path outz/ \
         --verify --broadcast \
         --out outz/ \
-        --constructor-args 100000000000000000 \
+        --constructor-args ${TOKEN_AMT} \
         -vvvv"
 
     echo -e "${BLUE}Running: $CO1${NC}"
