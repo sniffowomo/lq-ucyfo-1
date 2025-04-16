@@ -26,7 +26,7 @@ h1() {
 # --- Function that finds file pattern and deletes it
 fd_find_delete() {
     h1 "Finding files with fd and delete"
-    co1="fd -g 'counter.sol' -X rm -i"
+    co1="fd -g 'counters.sol' -X rm -i"
     echo -e "${GREEN}Command: ${NC}${co1}"
     eval "$co1"
 }
