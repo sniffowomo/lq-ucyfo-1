@@ -33,8 +33,13 @@ dock_setup() {
 docker_getin() {
     h1 "Setup Docker to run with zksync"
     CO1="docker ps -a"
-    CO2=""
+    CO2="docker start thirsty_borg"
+    CO3="docker exec -it thirsty_borg fish"
+    echo -e "${GREEN}Command: ${NC}${CO1}"
+    echo -e "${GREEN}Command: ${NC}${CO2}"
+    echo -e "${GREEN}Command: ${NC}${CO3}"
+    eval "$CO1" && eval "$CO2" && eval "$CO3"
 }
 
 # Execution
-dock_setup
+docker_getin
