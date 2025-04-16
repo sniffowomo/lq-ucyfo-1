@@ -4,7 +4,7 @@ pragma solidity ^0.8.13;
 import {Script, console} from "forge-std/Script.sol";
 import {BootySniff} from "../src/Counter.sol";
 
-contract BootySniff is Script {
+contract BootySniffScript is Script {
     BootySniff public booty;
 
     function setUp() public {}
