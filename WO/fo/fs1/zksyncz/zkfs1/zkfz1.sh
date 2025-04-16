@@ -88,10 +88,10 @@ fo_create_zksep() {
 fo_verify_zksep() {
     hea1 "Zksync Verify"
 
-    mkdir -p logs
     LOG_FILE="logs/verify_zksync.log"
+    mkdir -p logs
 
-    CONTRACT_ADDRESS="0x5E519c7ce4B59CF9459A12032Bc04041E5D1D6e7"
+    CONTRACT_ADDRESS="0xCd839f4f7F803d3945E37D24e7C48a5eba312ea3"
     CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
 
     echo -e "~~~~ZK ERA SEPOLIA VERIFY~~~~~"
@@ -99,20 +99,22 @@ fo_verify_zksep() {
     echo -e "~~~~ZK ERA SEPOLIA VERIFY~~~~~"
     echo -e "~~~~ZK ERA SEPOLIA VERIFY~~~~~"
 
-    CO1="forge verify-contract ${CONTRACT_ADDRESS} ${CONTRACT_PATH} \
+    CO1="forge verify-contract \
+        --zksync \
+        --chain zksync-testnet \
+        --num-of-optimizations 1000000 \
+        --watch \
         --verifier zksync \
         --verifier-url https://explorer.sepolia.era.zksync.dev/contract_verification \
-         --compiler-version 1.3.13 \
-        --num-of-optimizations 200000 \
-        --watch"
+        ${CONTRACT_ADDRESS} \
+        ${CONTRACT_PATH}"
 
-    echo -e \"${BLUE}Running: $CO1${NC}\"
+    echo -e \"${BLUE}Running: \$CO1${NC}\"
 
-    # Run and log to file
-    eval "$CO1" 2>&1 | tee "$LOG_FILE"
+    eval \"\$CO1\" 2>&1 | tee \"\$LOG_FILE\"
 
-    echo -e \"${GREEN}Successfully initiated verification${NC}\"
-    echo -e \"${YELLOW}Log saved to $LOG_FILE${NC}\"
+    echo -e \"${GREEN}Successfully verified contract${NC}\"
+    echo -e \"${YELLOW}Log saved to \$LOG_FILE${NC}\"
 }
 
 
