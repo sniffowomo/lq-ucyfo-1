@@ -94,7 +94,7 @@ cast_send_hol1() {
     # Main Command
     CO1="cast send \
     ${HOLE_DC} \
-    'transfer(address,uint256)' 0x420fFfdA7565D31e9b4b7ebAF0269b5564644656 500000000 \
+    'transfer(address,uint256)' 0x420fFfdA7565D31e9b4b7ebAF0269b5564644656 5000000000000 \
     --rpc-url ${rpcz[1]} \
     --private-key ${keyz[0]} \
     "
