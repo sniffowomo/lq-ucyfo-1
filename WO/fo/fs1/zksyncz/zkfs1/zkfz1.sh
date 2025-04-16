@@ -45,8 +45,37 @@ build_zk() {
 }
 
 # Deploy Zkysnc
-deploy_zk() {
+fo_create_sepolia() {
+    hea1 "Zksync Deploy"
 
+    LOG_FILE="logs/deploy_create_sepolia.log"
+    mkdir -p logs
+
+    rpz="https://zksync-sepolia.g.alchemy.com/v2/YfG5-esHajH3FpsLvC4eMFMEFYl9Lqcg"
+    keyz1="0x6890220d6cc0218032cab963a528672d85643a2c7edf340de6e27861d1900958"
+
+    echo -e "~~~~ZK ERA SEPOLI DEPLOY~~~~~"
+    echo -e "~~~~ZK ERA SEPOLI DEPLOY~~~~~"
+    echo -e "~~~~ZK ERA SEPOLI DEPLOY~~~~~"
+    echo -e "~~~~ZK ERA SEPOLI DEPLOY~~~~~"
+
+    CO1="forge create ${CONTRACT_PATH_CREATE} \
+        --rpc-url ${rpz} \
+        --private-key ${keyz1} \
+        --optimize true \
+        --optimizer-runs 999\
+        --build-info --build-info-path outz/ \
+        --etherscan-api-key ${ETHERSCAN_API_KEY} \
+        --verify --broadcast \
+        --out outz/"
+
+    echo -e "${BLUE}Running: $CO1${NC}"
+
+    # Run and log to file
+    eval "$CO1" 2>&1 | tee "$LOG_FILE"
+
+    echo -e "${GREEN}Successfully deployed contract${NC}"
+    echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
 }
 
 # Execution
