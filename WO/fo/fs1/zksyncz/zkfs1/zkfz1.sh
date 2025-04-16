@@ -88,8 +88,8 @@ fo_create_zksep() {
 fo_verify_zksep() {
     hea1 "Zksync Verify"
 
-    LOG_FILE="logs/verify_zksync.log"
     mkdir -p logs
+    LOG_FILE="logs/verify_zksync.log"
 
     CONTRACT_ADDRESS="0x5E519c7ce4B59CF9459A12032Bc04041E5D1D6e7"
     CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
@@ -103,13 +103,13 @@ fo_verify_zksep() {
         --verifier zksync \
         --verifier-url https://explorer.sepolia.era.zksync.dev/contract_verification \
         --compiler-version 0.8.19 \
-        --num-of-optimizations 200 \
+        --num-of-optimizations 200000 \
         --watch"
 
     echo -e \"${BLUE}Running: $CO1${NC}\"
 
     # Run and log to file
-    eval \"$CO1\" 2>&1 | tee \"$LOG_FILE\"
+    eval "$CO1" 2>&1 | tee "$LOG_FILE"
 
     echo -e \"${GREEN}Successfully initiated verification${NC}\"
     echo -e \"${YELLOW}Log saved to $LOG_FILE${NC}\"
