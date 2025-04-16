@@ -29,3 +29,10 @@ Link | What
 Site | What 
 :--: | :--:
 [`L2Fees`](https://l2fees.info/) | Website that shows the fees on various chains. Note shit is expensive
+
+# Commands 
+
+```sh 
+for f in *.sol; do mv -- "$f" "$f.bak"; done
+```
+- rename multiple extensions at once
