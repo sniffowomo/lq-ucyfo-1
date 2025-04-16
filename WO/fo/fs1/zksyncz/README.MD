@@ -8,4 +8,20 @@
 
 # Setup Zksync on Ubuntu 
 
+```sh 
+apt update
+apt install -y software-properties-common
+```
+- Required for adding some features 
 
+Installing fish shell
+```sh 
+sudo apt-add-repository ppa:fish-shell/release-4 -y
+sudo apt update -y
+sudo apt install fish -y
+```
+
+Install curl 
+```sh 
+apt-get install curl
+```

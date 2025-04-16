@@ -21,14 +21,14 @@ h1() {
     echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
 }
 
-# Funtions
+# Installaz
 
-dock_setup() {
-    h1 "Setup Docker to run with zksync"
-    CO1="docker run -it -v ./zksyncz:/zkz ubuntu:22.04 bash"
+install_zksync() {
+    h1 "Install Zksync"
+    CO1="curl -L https://raw.githubusercontent.com/matter-labs/foundry-zksync/main/install-foundry-zksync | bash"
     echo -e "${GREEN}Command: ${NC}${CO1}"
     eval "$CO1"
 }
 
 # Execution
-dock_setup
+install_zksync
