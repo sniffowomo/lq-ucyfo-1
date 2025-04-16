@@ -1,0 +1,1 @@
+./zkfz1.sh: line 112: forge verify-contract 0xCd839f4f7F803d3945E37D24e7C48a5eba312ea3  src/SimpleStorage.sol:SimpleStorage        --zksync         --chain zksync-testnet         --num-of-optimizations 1000000         --watch         --verifier zksync         --verifier-url https://explorer.sepolia.era.zksync.dev/contract_verification : No such file or directory

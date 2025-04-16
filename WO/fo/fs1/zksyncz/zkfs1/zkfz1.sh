@@ -99,15 +99,13 @@ fo_verify_zksep() {
     echo -e "~~~~ZK ERA SEPOLIA VERIFY~~~~~"
     echo -e "~~~~ZK ERA SEPOLIA VERIFY~~~~~"
 
-    CO1="forge verify-contract \
+    CO1="forge verify-contract ${CONTRACT_ADDRESS}  ${CONTRACT_PATH}\
         --zksync \
         --chain zksync-testnet \
         --num-of-optimizations 1000000 \
         --watch \
         --verifier zksync \
-        --verifier-url https://explorer.sepolia.era.zksync.dev/contract_verification \
-        ${CONTRACT_ADDRESS} \
-        ${CONTRACT_PATH}"
+        --verifier-url https://explorer.sepolia.era.zksync.dev/contract_verification "
 
     echo -e \"${BLUE}Running: \$CO1${NC}\"
 
