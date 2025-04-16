@@ -56,7 +56,7 @@ fo_only() {
     fi
 
     # Commands to execute
-    CO1="forge init --no-commit --no-git --force --vscode $name_of_project && cd $name_of_project "
+    CO1="forge init --no-git --force --vscode $name_of_project && cd $name_of_project "
 
     # Execution Commands
     eval "$CO1"
