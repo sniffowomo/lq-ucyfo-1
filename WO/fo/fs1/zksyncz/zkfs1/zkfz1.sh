@@ -91,7 +91,7 @@ fo_verify_zksep() {
     LOG_FILE="logs/verify_zksync.log"
     mkdir -p logs
 
-    CONTRACT_ADDRESS="0xCd839f4f7F803d3945E37D24e7C48a5eba312ea3"
+    CONTRACT_ADDRESS="0xB5f6F508FE6134aaD8bDf5504A2069F2c5bF6652"
     CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
 
     echo -e "~~~~ZK ERA SEPOLIA VERIFY~~~~~"
@@ -117,5 +117,5 @@ fo_verify_zksep() {
 
 
 # Execution
-fo_create_zksep
-# fo_verify_zksep
+# fo_create_zksep
+fo_verify_zksep
