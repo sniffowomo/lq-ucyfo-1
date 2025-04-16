@@ -13,3 +13,13 @@ ll
 ```docker
 docker run -it -v /home/you/projects/anvil:/app ubuntu:22.04 bash
 ```
+- This is to make zksync work
+
+## ZkSync Info
+
+Link | What 
+:--: | :--:
+[`ZkSyn Install`](https://foundry-book.zksync.io/) | Zksync Official Rust boook 
+
+> [!CAUTION]
+> Fucklin shit Zksync , doesn work int he normal CP , you need the docker to make ass fucking. Smell her armpits and pussy
