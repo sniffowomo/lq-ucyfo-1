@@ -54,7 +54,7 @@ fo_create_zksep() {
     rpz="https://zksync-sepolia.g.alchemy.com/v2/YfG5-esHajH3FpsLvC4eMFMEFYl9Lqcg"
     keyz1="0x6890220d6cc0218032cab963a528672d85643a2c7edf340de6e27861d1900958"
     ETHERSCAN_API_KEY="2JEANQYC4C9S6PKDFWNGVT2UER24T32D2M"
-    CONTRACT_PATH_CREATE="src/SimpleStorage.sol:SimpleStorage"
+    CONTRACT_PATH_CREATE="src/SimpleStorage.sol:SmellPanty"
 
     echo -e "~~~~ZK ERA SEPOLI DEPLOY~~~~~"
     echo -e "~~~~ZK ERA SEPOLI DEPLOY~~~~~"
@@ -91,8 +91,8 @@ fo_verify_zksep() {
     LOG_FILE="logs/verify_zksync.log"
     mkdir -p logs
 
-    CONTRACT_ADDRESS="0xB5f6F508FE6134aaD8bDf5504A2069F2c5bF6652"
-    CONTRACT_PATH="src/SimpleStorage.sol:SimpleStorage"
+    CONTRACT_ADDRESS="0x3Cb25c2D6EED78Cb4CB124399B4A2DCB141F7034"
+    CONTRACT_PATH="src/SimpleStorage.sol:SmellPanty"
 
     echo -e "~~~~ZK ERA SEPOLIA VERIFY~~~~~"
     echo -e "~~~~ZK ERA SEPOLIA VERIFY~~~~~"
@@ -115,7 +115,7 @@ fo_verify_zksep() {
     echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
 }
 
-
 # Execution
+# install_zksync
 # fo_create_zksep
 fo_verify_zksep

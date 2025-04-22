@@ -6,7 +6,7 @@ pragma solidity ^0.8.19;
 import "./booty.sol";
 
 // Initial Contract
-contract SimpleStorage {
+contract SmellPanty {
     // Storage for the favNum
     uint256 myFavNum;
 
