@@ -77,7 +77,7 @@ contract FundMe {
             address funder = funders[funderIndex];
             s_addressToAmountFunded[funder] = 0;
         }
-        s_funders = new address[](0);
+        s_funders = new address[](0);now 
         // payable(msg.sender).transfer(address(this).balance);
         (bool success,) = i_owner.call{value: address(this).balance}("");
         require(success);

@@ -1,0 +1,3 @@
+[submodule "WO/fo/ffs2/lib/chainlink-brownie-contracts"]
+	path = WO/fo/ffs2/lib/chainlink-brownie-contracts
+	url = https://github.com/smartcontractkit/chainlink-brownie-contracts
