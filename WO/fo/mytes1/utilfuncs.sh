@@ -89,12 +89,14 @@ cast_send_hol1() {
     echo -e "██║  ██║ ╚██████╔╝ ███████╗ ███████╗ ███████║ ██║  ██╗    ██║   "
     echo -e "╚═╝  ╚═╝  ╚═════╝  ╚══════╝ ╚══════╝ ╚══════╝ ╚═╝  ╚═╝    ╚═╝   "
 
-    HOLE_DC="0x764Ae21f060100230a3e5614F6e44D80526a4275"
+    HOLE_DC="0x321354d7A6046A2Afd604AEb130475a819c6c11D"
+    RCV_ADDY="0x420fFfdA7565D31e9b4b7ebAF0269b5564644656"
+    RCV_AMT="696969696969696996969696959969856969698"
 
     # Main Command
     CO1="cast send \
     ${HOLE_DC} \
-    'transfer(address,uint256)' 0x420fFfdA7565D31e9b4b7ebAF0269b5564644656 500000000000000 \
+    'transfer(address,uint256)' ${RCV_ADDY} ${RCV_AMT} \
     --rpc-url ${rpcz[1]} \
     --private-key ${keyz[0]} \
     "

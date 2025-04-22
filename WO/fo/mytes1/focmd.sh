@@ -99,7 +99,7 @@ fo_create_holeksy() {
     hea1 "Foundry Create - One of contract deployment"
 
     LOG_FILE="logs/deploy_create_holesky.log"
-    TOKEN_AMT="1000000000000000000000"
+    TOKEN_AMT="1000000000000000000000000000000000000000000000000000000"
     mkdir -p logs
 
     echo -e "██╗  ██╗  ██████╗  ██╗      ███████╗ ███████╗ ██╗  ██╗ ██╗   ██╗"
