@@ -1,0 +1,38 @@
+Compiling 4 files with Solc 0.8.19
+Solc 0.8.19 finished in 184.40ms
+Compiler run successful!
+Deployer: 0x420A8Fe13265Df3B9323C3D7681b2854B1309338
+Deployed to: 0x828A2D3FB075014AFdb7bce373cdACA499C3a1F7
+Transaction hash: 0xbee2d6e479006c1e7f0074bb2eb91d5db28aa27d798dcc9fc0562a542233aba1
+Starting contract verification...
+Waiting for sourcify to detect contract deployment...
+Start verifying contract `0x828A2D3FB075014AFdb7bce373cdACA499C3a1F7` deployed on holesky
+Compiler version: 0.8.19
+Optimizations:    999
+Constructor args: 000000000000000000000000694aa1769357215de4fac081bf1f309adc325306
+
+Submitting verification for [src/FundMe.sol:FundMe] 0x828A2D3FB075014AFdb7bce373cdACA499C3a1F7.
+Warning: Etherscan could not detect the deployment.; waiting 5 seconds before trying again (4 tries remaining)
+
+Submitting verification for [src/FundMe.sol:FundMe] 0x828A2D3FB075014AFdb7bce373cdACA499C3a1F7.
+Warning: Etherscan could not detect the deployment.; waiting 5 seconds before trying again (3 tries remaining)
+
+Submitting verification for [src/FundMe.sol:FundMe] 0x828A2D3FB075014AFdb7bce373cdACA499C3a1F7.
+Warning: Etherscan could not detect the deployment.; waiting 5 seconds before trying again (2 tries remaining)
+
+Submitting verification for [src/FundMe.sol:FundMe] 0x828A2D3FB075014AFdb7bce373cdACA499C3a1F7.
+Warning: Etherscan could not detect the deployment.; waiting 5 seconds before trying again (1 tries remaining)
+
+Submitting verification for [src/FundMe.sol:FundMe] 0x828A2D3FB075014AFdb7bce373cdACA499C3a1F7.
+Submitted contract for verification:
+	Response: `OK`
+	GUID: `altyzysgr29rnd2uagntuhwekadnpppfxnugabk1y91jyytq6y`
+	URL: https://holesky.etherscan.io/address/0x828a2d3fb075014afdb7bce373cdaca499c3a1f7
+Contract verification status:
+Response: `NOTOK`
+Details: `Pending in queue`
+Warning: Verification is still pending...; waiting 15 seconds before trying again (7 tries remaining)
+Contract verification status:
+Response: `OK`
+Details: `Pass - Verified`
+Contract successfully verified

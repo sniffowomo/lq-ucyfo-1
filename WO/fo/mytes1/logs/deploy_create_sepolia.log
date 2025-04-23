@@ -1,0 +1,33 @@
+No files changed, compilation skipped
+Deployer: 0x420A8Fe13265Df3B9323C3D7681b2854B1309338
+Deployed to: 0x4EC1b1ef27E71678869047b38Dd8266a24Fc577f
+Transaction hash: 0x4c1ae88c4872ad2d5323fe13b7ccb2ff5ee1d44c4d2049ac87cd56f796d8c558
+Starting contract verification...
+Waiting for sourcify to detect contract deployment...
+Start verifying contract `0x4EC1b1ef27E71678869047b38Dd8266a24Fc577f` deployed on sepolia
+Compiler version: 0.8.28
+Optimizations:    999
+Constructor args: 00000000000000000000ba489a1357b618990e8b7db0ff5653e3e0f83e0f83c2
+
+Submitting verification for [src/BootySniff.sol:BootyToken] 0x4EC1b1ef27E71678869047b38Dd8266a24Fc577f.
+Warning: Etherscan could not detect the deployment.; waiting 5 seconds before trying again (4 tries remaining)
+
+Submitting verification for [src/BootySniff.sol:BootyToken] 0x4EC1b1ef27E71678869047b38Dd8266a24Fc577f.
+Warning: Etherscan could not detect the deployment.; waiting 5 seconds before trying again (3 tries remaining)
+
+Submitting verification for [src/BootySniff.sol:BootyToken] 0x4EC1b1ef27E71678869047b38Dd8266a24Fc577f.
+Warning: Etherscan could not detect the deployment.; waiting 5 seconds before trying again (2 tries remaining)
+
+Submitting verification for [src/BootySniff.sol:BootyToken] 0x4EC1b1ef27E71678869047b38Dd8266a24Fc577f.
+Submitted contract for verification:
+	Response: `OK`
+	GUID: `pxtfvqguddkupidccwfhla92vgkhurujv3k3yxgtizt39xdzdc`
+	URL: https://sepolia.etherscan.io/address/0x4ec1b1ef27e71678869047b38dd8266a24fc577f
+Contract verification status:
+Response: `NOTOK`
+Details: `Pending in queue`
+Warning: Verification is still pending...; waiting 15 seconds before trying again (7 tries remaining)
+Contract verification status:
+Response: `OK`
+Details: `Pass - Verified`
+Contract successfully verified
