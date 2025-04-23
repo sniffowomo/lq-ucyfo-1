@@ -3,17 +3,14 @@
 pragma solidity ^0.8.18;
 
 import {Test, console} from "forge-std/Test.sol";
+import {FundMe} from "../src/FundMe.sol";
 
 contract FundMeTest is Test {
-    uint256 number  = 1;
-    
+
+    // Setup used for deployment of the contract    
     function setUp() external {
-        number = 2;
+        FundMe fundMe = new FundMe()
     }
 
-    function testDemo() public{
-        console.log("Duck all nite !!!");
-        console.log("Number: ", number);
-        assertEq(number, 2);
-    }
+    function testDemo() public{}
 }
