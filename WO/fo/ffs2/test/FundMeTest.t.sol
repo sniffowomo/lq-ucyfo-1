@@ -11,10 +11,10 @@ contract FundMeTest is Test {
 
     // Setup used for deployment of the contract
     function setUp() external {
-        FundMe fundMe = new FundMe(priceFeedAddress);
+        fundMe = new FundMe(priceFeedAddress);
     }
 
-    function testMinDollarIsFive() public {
+    function testMinDollarIsFive() public view {
         assertEq(fundMe.MINIMUM_USD(), 5e18);
     }
 }
