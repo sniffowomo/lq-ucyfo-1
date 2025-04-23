@@ -1,8 +1,81 @@
 Compiling 16 files with Solc 0.8.19
-Solc 0.8.19 finished in 415.02ms
-Error: Compiler run failed:
-Error (6160): Wrong argument count for function call: 0 arguments given but expected 1.
-  --> script/multirape.s.sol:11:25:
+Solc 0.8.19 finished in 6.20s
+Compiler run successful with warnings:
+Warning (2072): Unused local variable.
+  --> script/multirape.s.sol:12:9:
    |
-11 |         FundMe fundMe = new FundMe();
-   |                         ^^^^^^^^^^^^
+12 |         FundMe fundMe = new FundMe(priceFeedAddress);
+   |         ^^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+  --> script/multirape.s.sol:13:9:
+   |
+13 |         BootySmell booty = new BootySmell();
+   |         ^^^^^^^^^^^^^^^^
+
+Script ran successfully.
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 17000
+
+Estimated gas price: 0.00156928 gwei
+
+Estimated total gas used for script: 925817
+
+Estimated amount required: 0.00000145286610176 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+##
+Start verification for (2) contracts
+Start verifying contract `0xb4629d3B731a8e359b41623D28F49cA0F96Eae92` deployed on holesky
+Compiler version: 0.8.19
+Optimizations:    999
+Constructor args: 000000000000000000000000694aa1769357215de4fac081bf1f309adc325306
+
+Submitting verification for [src/FundMe.sol:FundMe] 0xb4629d3B731a8e359b41623D28F49cA0F96Eae92.
+Warning: Etherscan could not detect the deployment.; waiting 5 seconds before trying again (4 tries remaining)
+
+Submitting verification for [src/FundMe.sol:FundMe] 0xb4629d3B731a8e359b41623D28F49cA0F96Eae92.
+Submitted contract for verification:
+	Response: `OK`
+	GUID: `wlvk1nb8sap7ftgvuhp3al6nxznw3rr8wpjxkkmh6bevvclw56`
+	URL: https://holesky.etherscan.io/address/0xb4629d3b731a8e359b41623d28f49ca0f96eae92
+Contract verification status:
+Response: `NOTOK`
+Details: `Pending in queue`
+Warning: Verification is still pending...; waiting 15 seconds before trying again (7 tries remaining)
+Contract verification status:
+Response: `OK`
+Details: `Pass - Verified`
+Contract successfully verified
+Start verifying contract `0xaf4f9e35723b532cE70b471dEC1e9a4AAcC85810` deployed on holesky
+Compiler version: 0.8.19
+Optimizations:    999
+
+Submitting verification for [src/FundMe.sol:BootySmell] 0xaf4f9e35723b532cE70b471dEC1e9a4AAcC85810.
+Submitted contract for verification:
+	Response: `OK`
+	GUID: `uni7bjg8ps1f5tkgbr9iaam6wz7askmrsxxcpqd1hcmugrxcbf`
+	URL: https://holesky.etherscan.io/address/0xaf4f9e35723b532ce70b471dec1e9a4aacc85810
+Contract verification status:
+Response: `NOTOK`
+Details: `Pending in queue`
+Warning: Verification is still pending...; waiting 15 seconds before trying again (7 tries remaining)
+Contract verification status:
+Response: `OK`
+Details: `Pass - Verified`
+Contract successfully verified
+All (2) contracts were verified!
+
+Transactions saved to: /workspaces/lq-ucyfo-1/WO/fo/ffs2/broadcast/multirape.s.sol/17000/run-latest.json
+
+Sensitive values saved to: /workspaces/lq-ucyfo-1/WO/fo/ffs2/cache/multirape.s.sol/17000/run-latest.json
+
