@@ -12,5 +12,7 @@ contract FundMeTest is Test {
         FundMe fundMe = new FundMe();
     }
 
-    function testDemo() public{}
+    function testMinDollarIsFive() public{
+        MINIMUM_USD(). 5e18
+    }
 }
