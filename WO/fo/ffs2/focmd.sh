@@ -94,6 +94,7 @@ fo_test() {
 # Forge Create
 ################################################
 CONTRACT_PATH_CREATE="src/FundMe.sol:FundMe"
+Sepolia_DataFeed="0x694AA1769357215DE4FAC081bf1f309aDC325306"
 
 fo_create_holeksy() {
     hea1 "Foundry Create - One of contract deployment"
@@ -118,6 +119,7 @@ fo_create_holeksy() {
         --build-info --build-info-path outz/ \
         --verify --broadcast \
         --out outz/ \
+        --constructor-args ${Sepolia_DataFeed} \
         -vvvv"
 
     echo -e "${BLUE}Running: $CO1${NC}"
@@ -133,7 +135,7 @@ fo_create_sepolia() {
     hea1 "Foundry Create - One of contract deployment"
 
     LOG_FILE="logs/deploy_create_sepolia.log"
-    Sepolia_DataFeed="0x694AA1769357215DE4FAC081bf1f309aDC325306"
+
     mkdir -p logs
 
     echo -e "███████╗ ███████╗ ██████╗   ██████╗  ██╗      ██╗  █████╗ "
@@ -152,7 +154,8 @@ fo_create_sepolia() {
         --etherscan-api-key ${ETHERSCAN_API_KEY} \
         --verify --broadcast \
         --out outz/ \
-        --constructor-args ${Sepolia_DataFeed} "
+        --constructor-args ${Sepolia_DataFeed} \
+        -vvvvv"
 
     echo -e "${BLUE}Running: $CO1${NC}"
 
