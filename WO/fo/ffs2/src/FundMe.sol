@@ -113,5 +113,7 @@ contract FundMe {
         return s_priceFeed;
     }
 
-    
+    function revealBooty() public pure returns (string memory) {
+        return getBooty();
+    }
 }
