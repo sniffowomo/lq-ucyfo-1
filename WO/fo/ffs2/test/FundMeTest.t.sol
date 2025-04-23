@@ -15,6 +15,6 @@ contract FundMeTest is Test {
     }
 
     function testMinDollarIsFive() public {
-        assertEq(fundMe.MINIMUM_USD(), 5e18, "Minimum dollar amount is not 5");
+        assertEq(fundMe.MINIMUM_USD(), 5e18);
     }
 }
