@@ -115,7 +115,7 @@ contract FundMe {
 
 }
 
-contract TreasureHunt is Pirate {
+contract BootySmell is Booty {
     function revealBooty() public pure returns (string memory) {
         return getBooty();
     }
