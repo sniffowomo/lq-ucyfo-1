@@ -1,5 +1,11 @@
 <img src="./sn/2.gif" width="3000">
 
+1. [lq-ucyfo-1](#lq-ucyfo-1)
+2. [Regarding ](#regarding-)
+   1. [ZkSync Info](#zksync-info)
+3. [L2Fees](#l2fees)
+4. [Commands](#commands)
+5. [Costs Comparing `Sepolia` and `Holesky`](#costs-comparing-sepolia-and-holesky)
 
 
 # lq-ucyfo-1
@@ -36,3 +42,8 @@ Site | What
 for f in *.sol; do mv -- "$f" "$f.bak"; done
 ```
 - rename multiple extensions at once
+
+# Costs Comparing `Sepolia` and `Holesky`
+
+1. Sep is Fkn expensive dont use unless really ncessary 
+2. Hol is far better and cheaper for contract deployment and tojens
