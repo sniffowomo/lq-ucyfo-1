@@ -143,7 +143,7 @@ fo_create_sepolia() {
     echo -e "███████║ ███████╗ ██║      ╚██████╔╝ ███████╗ ██║ ██║  ██║"
     echo -e "╚══════╝ ╚══════╝ ╚═╝       ╚═════╝  ╚══════╝ ╚═╝ ╚═╝  ╚═╝"
 
-    CO1="forge create ${CONTRACT_PATH_CREATE} --constructor-args ${Sepolia_DataFeed} \
+    CO1="forge create ${CONTRACT_PATH_CREATE} \
         --rpc-url ${rpcz[0]} \
         --private-key ${keyz[0]} \
         --optimize true \
@@ -151,7 +151,8 @@ fo_create_sepolia() {
         --build-info --build-info-path outz/ \
         --etherscan-api-key ${ETHERSCAN_API_KEY} \
         --verify --broadcast \
-        --out outz/ "
+        --out outz/ \
+        --constructor-args ${Sepolia_DataFeed} "
 
     echo -e "${BLUE}Running: $CO1${NC}"
 
