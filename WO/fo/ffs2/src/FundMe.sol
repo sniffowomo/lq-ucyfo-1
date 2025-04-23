@@ -3,7 +3,7 @@
 pragma solidity 0.8.19;
 // 2. Imports
 
-import {AggregatorV3Interface} from "chainlink/AggregatorV3Interface.sol";
+import {AggregatorV3Interface} from "chainlink/contracts/AggregatorV3Interface.sol";
 import {PriceConverter} from "./PriceConverter.sol";
 
 // 3. Interfaces, Libraries, Contracts
@@ -11,7 +11,7 @@ error FundMe__NotOwner();
 
 /**
  * @title A sample Funding Contract
- * @author Patrick Collins
+ * @author Booty Man
  * @notice This contract is for creating a sample funding contract
  * @dev This implements price feeds as our library
  */

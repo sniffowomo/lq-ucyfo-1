@@ -78,3 +78,5 @@ Command to install
 ```sh 
 forge install smartcontractkit/chainlink-brownie-contracts --no-commit
 ```
+
+- Regarding mappings for some reason the remappings.txt works and not remappings in foundry.toml

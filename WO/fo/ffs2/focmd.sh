@@ -93,7 +93,7 @@ fo_test() {
 ###############################################
 # Forge Create
 ################################################
-CONTRACT_PATH_CREATE="src/Counter.sol:Counter"
+CONTRACT_PATH_CREATE="src/FundMe.sol:FundMe"
 
 fo_create_holeksy() {
     hea1 "Foundry Create - One of contract deployment"
