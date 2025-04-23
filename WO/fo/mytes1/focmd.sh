@@ -134,6 +134,7 @@ fo_create_sepolia() {
     hea1 "Foundry Create - One of contract deployment"
 
     LOG_FILE="logs/deploy_create_sepolia.log"
+    TOKEN_AMT="69696969696969696969696969696969696969696969696969666"
     mkdir -p logs
 
     echo -e "███████╗ ███████╗ ██████╗   ██████╗  ██╗      ██╗  █████╗ "
