@@ -55,7 +55,7 @@ cast_wallet_mnemonic() {
 cast_wallet_van_starts_with() {
     hea1 "Create Wallets Using cast and menmonic"
 
-    startsWith="420"
+    startsWith="420420"
 
     # Get name of Project
     echo -e "Enter Number Of Wallets to create with cast starting with ${startsWith}"
