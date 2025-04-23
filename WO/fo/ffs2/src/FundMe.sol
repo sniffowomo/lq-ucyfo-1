@@ -113,6 +113,9 @@ contract FundMe {
         return s_priceFeed;
     }
 
+}
+
+contract TreasureHunt is Pirate {
     function revealBooty() public pure returns (string memory) {
         return getBooty();
     }
