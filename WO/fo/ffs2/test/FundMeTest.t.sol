@@ -12,6 +12,7 @@ contract FundMeTest is Test {
     }
 
     function testDemo() public{
+        
         console.log("Number: ", number);
         assertEq(number, 2);
     }
