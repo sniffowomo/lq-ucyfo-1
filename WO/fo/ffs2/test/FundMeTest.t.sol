@@ -12,7 +12,7 @@ contract FundMeTest is Test {
     }
 
     function testDemo() public{
-        
+        console.log("Duck all nite !!!");
         console.log("Number: ", number);
         assertEq(number, 2);
     }
