@@ -1,8 +1,8 @@
 Compiling 16 files with Solc 0.8.19
-Solc 0.8.19 finished in 2.08s
+Solc 0.8.19 finished in 415.02ms
 Error: Compiler run failed:
-Error (7920): Identifier not found or not unique.
-  --> script/multirape.s.sol:11:9:
+Error (6160): Wrong argument count for function call: 0 arguments given but expected 1.
+  --> script/multirape.s.sol:11:25:
    |
-11 |         FundmeContract fundMe = new Fundme();
-   |         ^^^^^^^^^^^^^^
+11 |         FundMe fundMe = new FundMe();
+   |                         ^^^^^^^^^^^^

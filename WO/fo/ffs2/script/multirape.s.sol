@@ -8,8 +8,8 @@ contract RapeAll is Script {
     function run() public {
         vm.startBroadcast();
 
-        FundmeContract fundMe = new Fundme();
-        BootySmellContract booty = new BootySmell();
+        FundMe fundMe = new FundMe();
+        BootySmell booty = new BootySmell();
         
         vm.stopBroadcast();
     }
