@@ -112,7 +112,6 @@ contract FundMe {
     function getPriceFeed() public view returns (AggregatorV3Interface) {
         return s_priceFeed;
     }
-
 }
 
 contract BootySmell is Booty {
