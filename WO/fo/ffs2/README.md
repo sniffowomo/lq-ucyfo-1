@@ -81,4 +81,4 @@ forge install smartcontractkit/chainlink-brownie-contracts --no-commit
 
 - Regarding mappings for some reason the remappings.txt works and not remappings in foundry.toml
 
-1. For `AggregatorV3Interface.sol` - you need the contract which aggregates the price [`0x694AA1769357215DE4FAC081bf1f309aDC325306`]()
+1. For `AggregatorV3Interface.sol` - you need the contract which aggregates the price [`0x694AA1769357215DE4FAC081bf1f309aDC325306`](https://docs.chain.link/data-feeds/price-feeds/addresses?page=1&network=ethereum&search=#sepolia-testnet)
