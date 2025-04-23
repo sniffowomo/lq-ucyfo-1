@@ -23,7 +23,7 @@ hea1() {
 # Artem Function
 artem1() {
     hea1 "Artem's Function"
-    FIL="images.jpg"
+    FIL="o.png"
     CO1="artem --no-color --border  ${FIL}"
     eval "$CO1"
 }
