@@ -143,7 +143,7 @@ fo_create_sepolia() {
     echo -e "███████║ ███████╗ ██║      ╚██████╔╝ ███████╗ ██║ ██║  ██║"
     echo -e "╚══════╝ ╚══════╝ ╚═╝       ╚═════╝  ╚══════╝ ╚═╝ ╚═╝  ╚═╝"
 
-    CO1="forge create ${CONTRACT_PATH_CREATE} \
+    CO1="forge create ${CONTRACT_PATH_CREATE} --constructor-args ${Sepolia_DataFeed} \
         --rpc-url ${rpcz[0]} \
         --private-key ${keyz[0]} \
         --optimize true \
