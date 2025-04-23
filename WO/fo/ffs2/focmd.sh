@@ -133,6 +133,7 @@ fo_create_sepolia() {
     hea1 "Foundry Create - One of contract deployment"
 
     LOG_FILE="logs/deploy_create_sepolia.log"
+    Sepolia_DataFeed="0x694AA1769357215DE4FAC081bf1f309aDC325306"
     mkdir -p logs
 
     echo -e "███████╗ ███████╗ ██████╗   ██████╗  ██╗      ██╗  █████╗ "
@@ -150,7 +151,8 @@ fo_create_sepolia() {
         --build-info --build-info-path outz/ \
         --etherscan-api-key ${ETHERSCAN_API_KEY} \
         --verify --broadcast \
-        --out outz/"
+        --out outz/ \ 
+        --constructor-args ${Sepolia_DataFeed}"
 
     echo -e "${BLUE}Running: $CO1${NC}"
 
