@@ -72,3 +72,9 @@ $ cast --help
 Repo | Description
 :--: | :--:
 [`Chainlink-Brownie-Contracts`](https://github.com/smartcontractkit/chainlink-brownie-contracts) | Imports referenced
+
+Command to install 
+
+```sh 
+forge install smartcontractkit/chainlink-brownie-contracts --no-commit
+```
