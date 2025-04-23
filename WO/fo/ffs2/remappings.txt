@@ -1,2 +1,2 @@
 forge-std/=lib/forge-std/src/
-@chainlink/=lib/chainlink-brownie-contracts/contracts/src/v0.8/shared/interfaces/
+# chainlink/=lib/chainlink-brownie-contracts/contracts/src/v0.8/shared/interfaces/
