@@ -5,7 +5,9 @@ import "forge-std/Script.sol";
 import "../src/FundMe.sol";
 
 /**
-asdsad
+The script below is deploying multipl contracts 
+- Since you dont need t use the variable for each contract
+- Using `new` keyword , The names of the contract are accroding to what is in the actual file 
  */
 
 contract RapeAll is Script {
