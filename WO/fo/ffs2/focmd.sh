@@ -151,8 +151,7 @@ fo_create_sepolia() {
         --build-info --build-info-path outz/ \
         --etherscan-api-key ${ETHERSCAN_API_KEY} \
         --verify --broadcast \
-        --out outz/ \ 
-        --constructor-args ${Sepolia_DataFeed}"
+        --out outz/ "
 
     echo -e "${BLUE}Running: $CO1${NC}"
 
