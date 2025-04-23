@@ -33,12 +33,12 @@ help:
 build:
 	$(call FORMAT_FIRST)
 	@echo "$(BLUE)[*] Building contracts...$(RESET)"
-	@forge build
+	@forge build -vvvvv
 
 test:
 	$(call FORMAT_FIRST)
 	@echo "$(BLUE)[*] Running tests...$(RESET)"
-	@forge test
+	@forge test -vvvvv
 
 script:
 	$(call FORMAT_FIRST)
