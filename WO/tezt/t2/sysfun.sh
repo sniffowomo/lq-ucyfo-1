@@ -145,7 +145,7 @@ cast_interface() {
     OUTPUT_FILE="cmdrun/cast_Interface_${DATE_STAMP}.txt"
 
     co1="cast interface $KONTRACT \
-    -o cmdrun/${KONTRACT}.abi \
+    -o cmdrun/${KONTRACT}.sol \
     -c ${CHAIN} \
     -e ${ETHERSCAN_API_KEY} "
 
