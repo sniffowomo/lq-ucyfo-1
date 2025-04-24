@@ -134,8 +134,38 @@ cast_bytecode_disassemmble() {
 }
 
 #--- Cast Interface ---
+cast_interface() {
+    h1 "Cast get interface of contract"
+
+    KONTRACT="0xDb441F74E8B7307220823e228659415fFB7A59aa"
+    CHAIN="holesky"
+
+    # Create filename with date appended (format: YYYYMMDD_HHMMSS)
+    DATE_STAMP=$(date '+%Y%m%d_%H%M%S')
+    OUTPUT_FILE="cmdrun/cast_Interface_${DATE_STAMP}.txt"
+
+    co1="cast interface $KONTRACT \
+    -o cmdrun/${KONTRACT}.abi \
+    -c ${CHAIN} \
+    -e ${ETHERSCAN_API_KEY} "
+
+    echo -e "${GREEN}Command: ${NC}${co1}"
+
+    # First write the date to the file
+    echo "Date: $(date '+%Y-%m-%d %H:%M:%S')" >"$OUTPUT_FILE"
+    echo "Command: $co1" >>"$OUTPUT_FILE"
+    echo "-------------------------------------------" >>"$OUTPUT_FILE"
+
+    # Now append the command output to the file that already has the date
+    output=$(eval "$co1" | tee -a "$OUTPUT_FILE")
+
+    echo -e "${GREEN}Output: ${NC} \n----\n $output $"
+
+    echo -e "\n${GREEN}Bytecode saved to:${NC} $OUTPUT_FILE"
+}
 
 # --------- Executions -----------------
 # fd_find_delete
 # cast_bytecode_disassemmble
-cast_source
+# cast_source
+cast_interface
