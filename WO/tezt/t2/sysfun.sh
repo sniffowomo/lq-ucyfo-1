@@ -80,7 +80,7 @@ cast_bytecode() {
 cast_source() {
     h1 "Cast source get contract source"
 
-    KONTRACT="0xDb441F74E8B7307220823e228659415fFB7A59aa"
+    KONTRACT="0x4c34050168E0e19EEC6fB6d462BeD51840350c43"
 
     # Create filename with date appended (format: YYYYMMDD_HHMMSS)
     DATE_STAMP=$(date '+%Y%m%d_%H%M%S')
