@@ -86,7 +86,10 @@ cast_bytecode_disassemmble() {
     DATE_STAMP=$(date '+%Y%m%d_%H%M%S')
     OUTPUT_FILE="cmdrun/cast_bytecode_disassemble_run_${DATE_STAMP}.txt"
 
-    co1="cast code -d $KONTRACT -r ${rpcz[1]}"
+    co1="cast code $KONTRACT \
+    -e ${ETHERSCAN_API_KEY} \
+    -c holeksy \ "
+
     echo -e "${GREEN}Command: ${NC}${co1}"
 
     # First write the date to the file
@@ -104,7 +107,7 @@ cast_bytecode_disassemmble() {
 
 # --- Cast - etherscan source
 cast_bytecode_disassemmble() {
-    h1 "cast etherscan-source get sourcecode of contract"
+    h1 "cast source get sourcecode of contract"
 
     KONTRACT="0xDb441F74E8B7307220823e228659415fFB7A59aa"
 
@@ -112,7 +115,7 @@ cast_bytecode_disassemmble() {
     DATE_STAMP=$(date '+%Y%m%d_%H%M%S')
     OUTPUT_FILE="cmdrun/cast_ethsrc_${DATE_STAMP}.txt"
 
-    co1="cast code -d $KONTRACT -r ${rpcz[1]}"
+    co1="cast source $KONTRACT -r ${rpcz[1]}"
     echo -e "${GREEN}Command: ${NC}${co1}"
 
     # First write the date to the file
