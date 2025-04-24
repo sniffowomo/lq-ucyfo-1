@@ -138,7 +138,7 @@ cast_interface() {
     h1 "Cast get interface of contract"
 
     KONTRACT="0xa3AE6cDcF57E08437B17Ce5C8E53232cc4C876Fc"
-    CHAIN="holesky"
+    CHAIN="sepolia"
 
     # Create filename with date appended (format: YYYYMMDD_HHMMSS)
     DATE_STAMP=$(date '+%Y%m%d_%H%M%S')
@@ -161,7 +161,7 @@ cast_interface() {
 
     echo -e "${GREEN}Output: ${NC} \n----\n $output $"
 
-    echo -e "\n${GREEN}Bytecode saved to:${NC} $OUTPUT_FILE"
+    echo -e "\n${GREEN}RunOutput = :${NC} $OUTPUT_FILE"
 }
 
 # --------- Executions -----------------
