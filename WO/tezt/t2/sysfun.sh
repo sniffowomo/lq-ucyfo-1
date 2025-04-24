@@ -86,10 +86,10 @@ cast_source() {
     DATE_STAMP=$(date '+%Y%m%d_%H%M%S')
     OUTPUT_FILE="cmdrun/cast_src_run_${DATE_STAMP}.txt"
 
-    co1="cast source $KONTRACT \
+    co1="cast source ${KONTRACT} \
     -d cmdrun \
     -e ${ETHERSCAN_API_KEY} \
-    -c holeksy \ "
+    -c holeksy "
 
     echo -e "${GREEN}Command: ${NC}${co1}"
 
