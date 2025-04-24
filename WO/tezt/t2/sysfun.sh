@@ -77,7 +77,7 @@ cast_bytecode() {
 }
 
 # --- Cast - disassemble
-cast_bytecode_disassemmble() {
+cast_source() {
     h1 "Cast Get Contract Bytecode"
 
     KONTRACT="0xDb441F74E8B7307220823e228659415fFB7A59aa"
@@ -86,7 +86,8 @@ cast_bytecode_disassemmble() {
     DATE_STAMP=$(date '+%Y%m%d_%H%M%S')
     OUTPUT_FILE="cmdrun/cast_bytecode_disassemble_run_${DATE_STAMP}.txt"
 
-    co1="cast code $KONTRACT \
+    co1="cast source $KONTRACT \
+    -d cs1 \
     -e ${ETHERSCAN_API_KEY} \
     -c holeksy \ "
 
