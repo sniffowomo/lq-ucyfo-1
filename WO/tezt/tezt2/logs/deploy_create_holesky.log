@@ -1,0 +1,26 @@
+Compiling 1 files with Solc 0.8.28
+Solc 0.8.28 finished in 64.03ms
+Compiler run successful!
+Deployer: 0x420A8Fe13265Df3B9323C3D7681b2854B1309338
+Deployed to: 0x9374d053E26557d2ed3B6a0A0D6b800a8A110432
+Transaction hash: 0x2c6fd695fb38eb31b4d7d81d041aca7948c6344254ebef22f16a7953f6aa0885
+Starting contract verification...
+Waiting for sourcify to detect contract deployment...
+Start verifying contract `0x9374d053E26557d2ed3B6a0A0D6b800a8A110432` deployed on holesky
+Compiler version: 0.8.28
+Optimizations:    999
+
+Submitting verification for [src/Counter.sol:Panty] 0x9374d053E26557d2ed3B6a0A0D6b800a8A110432.
+Warning: Etherscan could not detect the deployment.; waiting 5 seconds before trying again (4 tries remaining)
+
+Submitting verification for [src/Counter.sol:Panty] 0x9374d053E26557d2ed3B6a0A0D6b800a8A110432.
+Warning: Etherscan could not detect the deployment.; waiting 5 seconds before trying again (3 tries remaining)
+
+Submitting verification for [src/Counter.sol:Panty] 0x9374d053E26557d2ed3B6a0A0D6b800a8A110432.
+Warning: Etherscan could not detect the deployment.; waiting 5 seconds before trying again (2 tries remaining)
+
+Submitting verification for [src/Counter.sol:Panty] 0x9374d053E26557d2ed3B6a0A0D6b800a8A110432.
+Warning: Etherscan could not detect the deployment.; waiting 5 seconds before trying again (1 tries remaining)
+
+Submitting verification for [src/Counter.sol:Panty] 0x9374d053E26557d2ed3B6a0A0D6b800a8A110432.
+Warning: Etherscan could not detect the deployment.; waiting 5 seconds before trying again (0 tries remaining)
