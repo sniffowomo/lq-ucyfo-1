@@ -73,6 +73,32 @@ cast_bytecode() {
     echo -e "${GREEN}Output: ${NC} \n----\n $output $"
 
     echo -e "\n${GREEN}Bytecode saved to:${NC} $OUTPUT_FILE"
+
+    # --- Cast - disassemble
+    cast_bytecode_disassemmble() {
+        h1 "Cast Get Contract Bytecode"
+
+        KONTRACT="0xDb441F74E8B7307220823e228659415fFB7A59aa"
+
+        # Create filename with date appended (format: YYYYMMDD_HHMMSS)
+        DATE_STAMP=$(date '+%Y%m%d_%H%M%S')
+        OUTPUT_FILE="cmdrun/cast_bytecode_disassemble_run_${DATE_STAMP}.txt"
+
+        co1="cast code -d $KONTRACT -r ${rpcz[1]}"
+        echo -e "${GREEN}Command: ${NC}${co1}"
+
+        # First write the date to the file
+        echo "Date: $(date '+%Y-%m-%d %H:%M:%S')" >"$OUTPUT_FILE"
+        echo "Command: $co1" >>"$OUTPUT_FILE"
+        echo "-------------------------------------------" >>"$OUTPUT_FILE"
+
+        # Now append the command output to the file that already has the date
+        output=$(eval "$co1" | tee -a "$OUTPUT_FILE")
+
+        echo -e "${GREEN}Output: ${NC} \n----\n $output $"
+
+        echo -e "\n${GREEN}Bytecode saved to:${NC} $OUTPUT_FILE"
+    }
 }
 
 # Executions
