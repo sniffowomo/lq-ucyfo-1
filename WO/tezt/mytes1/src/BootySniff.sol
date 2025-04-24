@@ -7,8 +7,8 @@ import {BootyScat} from "./Booty.sol";
 // import {Test, console} from "forge-std/Test.sol";
 
 contract BootyToken is IERC20 {
-    string private _name = "WomanPissDrink";
-    string private _symbol = "DrinkWomanPiss";
+    string private _name = "FEMDOMSCAT";
+    string private _symbol = "FEMDOMSCAT";
     uint8 private _decimals = 18;
     uint256 private _totalSupply;
 
