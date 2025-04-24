@@ -85,11 +85,12 @@ cast_source() {
     # Create filename with date appended (format: YYYYMMDD_HHMMSS)
     DATE_STAMP=$(date '+%Y%m%d_%H%M%S')
     OUTPUT_FILE="cmdrun/cast_src_run_${DATE_STAMP}.txt"
+    CHAIN="holesky"
 
     co1="cast source ${KONTRACT} \
     -d cmdrun \
     -e ${ETHERSCAN_API_KEY} \
-    -c holeksy "
+    -c ${CHAIN} "
 
     echo -e "${GREEN}Command: ${NC}${co1}"
 
