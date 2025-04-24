@@ -70,7 +70,7 @@ cast_bytecode() {
     # Now append the command output to the file that already has the date
     output=$(eval "$co1" | tee -a "$OUTPUT_FILE")
 
-    echo -e "${GREEN}Output: ${NC} \n----\n $output $" # Show first 60 chars
+    echo -e "${GREEN}Output: ${NC} \n----\n $output $"
 
     echo -e "\n${GREEN}Bytecode saved to:${NC} $OUTPUT_FILE"
 }
