@@ -213,7 +213,7 @@ cast_hol1_multi() {
     "
 
     # Execution Sequence
-    echo -e "${GREEN}Command: ${NC}${CO1}"
+    echo -e "${GREEN}Command: ${NC}${CO2}"
     RESULT=$(eval "$CO2")
     {
         echo "++++++++++++++++ $(date) ++++++++++++++++"
