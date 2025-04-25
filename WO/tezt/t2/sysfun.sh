@@ -138,7 +138,7 @@ cast_interface() {
     h1 "Cast get interface of contract"
 
     KONTRACT="0x7778ae20B067247Bb906488788DB9eB0Ae0c27Ad"
-    CHAIN="sepolia"
+    CHAIN="holesky"
 
     # Create filename with date appended (format: YYYYMMDD_HHMMSS)
     DATE_STAMP=$(date '+%Y%m%d_%H%M%S')
