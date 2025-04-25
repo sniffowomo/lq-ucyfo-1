@@ -206,19 +206,20 @@ cast_hol1_multi() {
     | cast --to-dec"
 
     # Set Function
+    CO2F1="'increment()'"
     CO2="cast send \
     ${HOLE_DC} \
-    'increment()' \
+    ${CO2F1} \
     --rpc-url ${rpcz[1]} \
     --private-key ${keyz[0]} \
     "
 
     # Execution Sequence
-    echo -e "${GREEN}Command: ${NC}${CO1}"
-    RESULT=$(eval "$CO1")
+    echo -e "${GREEN}Command: ${NC}${CO2}"
+    RESULT=$(eval "$CO2")
     {
         echo "++++++++++++++++ $(date) ++++++++++++++++"
-        echo "Command: $CO1"
+        echo "Command: $CO2"
         echo "Result: $RESULT"
         echo "----------------------------------------"
     } >>"./logs/cast_retrieve_holesky1.txt"
