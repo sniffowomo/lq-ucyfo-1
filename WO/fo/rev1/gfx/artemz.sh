@@ -33,7 +33,7 @@ c1() {
 }
 
 c2() {
-    FIL="a.jpg"
+    FIL="a.png"
     CO="artem --border --no-color $FIL"
     echo -e "${GREEN} Executin the command: ${CO} ${NC}"
 

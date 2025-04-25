@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
+import {Booty} from "./BootySmell.sol";
+
 contract Counter {
     uint256 public number;
 
