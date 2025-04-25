@@ -198,9 +198,10 @@ cast_hol1_multi() {
     HOLE_DC="0xd960606c3c748B5502De2a81756E63ad0E1480c5"
 
     # Retrieve Function
+    COLF="retrieve()"
     CO1="cast call \
     ${HOLE_DC} \
-    'retrieve()' \
+    ${COLF} \
     --rpc-url ${rpcz[1]}  \
     | cast --to-dec"
 
@@ -214,10 +215,10 @@ cast_hol1_multi() {
 
     # Execution Sequence
     echo -e "${GREEN}Command: ${NC}${CO2}"
-    RESULT=$(eval "$CO2")
+    RESULT=$(eval "$CO1")
     {
         echo "++++++++++++++++ $(date) ++++++++++++++++"
-        echo "Command: $CO2"
+        echo "Command: $CO1"
         echo "Result: $RESULT"
         echo "----------------------------------------"
     } >>"./logs/cast_retrieve_holesky1.txt"
