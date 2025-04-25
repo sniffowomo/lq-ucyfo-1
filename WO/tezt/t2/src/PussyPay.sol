@@ -16,7 +16,7 @@ interface BootyToken {
     function transferFrom(address from, address to, uint256 amount) external returns (bool);
 }
 
-import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+import "openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 
 contract PantyPay {
     using SafeERC20 for IERC20;
@@ -53,8 +53,7 @@ contract PantyPay {
         require(amount > 0, "Amount must be greater than 0");
         
         // The user must have previously called approve() on the BootyToken contract
-        require(bootyToken.transferFrom(msg.sender, address(this), amount), 
-                "Token transfer failed. Did you approve this contract?");
+        IERC20(address(bootyToken)).safeTransferFrom(msg.sender, address(this), amount);
                 
         emit TokenDeposited(msg.sender, amount);
     }
@@ -66,10 +65,10 @@ contract PantyPay {
     function withdrawBootyToken() public {
         require(msg.sender == owner, "Only owner can withdraw tokens");
         
+        uint256 tokenBalance = bootyToken.balanceOf(address(this));
         IERC20(address(bootyToken)).safeTransfer(msg.sender, tokenBalance);
         
-        require(bootyToken.transfer(msg.sender, tokenBalance), 
-                "Token withdrawal failed");
+        IERC20(address(bootyToken)).safeTransfer(msg.sender, tokenBalance);
                 
         emit TokenWithdrawn(msg.sender, tokenBalance);
     }
@@ -91,8 +90,7 @@ contract PantyPay {
         require(amount > 0, "Amount must be greater than 0");
         require(bootyToken.balanceOf(address(this)) >= amount, "Not enough tokens in contract");
         
-        require(bootyToken.transfer(msg.sender, amount), 
-                "Token withdrawal failed");
+        IERC20(address(bootyToken)).safeTransfer(msg.sender, amount);
                 
         emit TokenWithdrawn(msg.sender, amount);
     }
