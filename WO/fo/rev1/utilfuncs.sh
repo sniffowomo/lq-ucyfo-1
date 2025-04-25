@@ -207,7 +207,7 @@ cast_hol1_multi() {
     # Set Function
     CO2="cast send \
     ${HOLE_DC} \
-    'setNumber(uint256 newNumber)' 31333333333337 \
+    'increment()' \
     --rpc-url ${rpcz[1]} \
     --private-key ${keyz[0]} \
     "
