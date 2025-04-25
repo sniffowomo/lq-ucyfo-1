@@ -183,26 +183,26 @@ panty_loope() {
     done
 }
 
-# ///////////////// Seplia Deployed Contract Interaction ////////////////
-cast_sep1_multi() {
-    h1 "cast send multiple commands"
+# ///////////////// Holeksy Deployed Contract Interaction ////////////////
+# Multiple Commands
+cast_hol1_multi() {
+    h1 "cast send to holeksy"
 
-    echo -e "███████╗ ███████╗ ██████╗   ██████╗  ██╗      ███████╗ ██╗  ██╗ ██╗"
-    echo -e "██╔════╝ ██╔════╝ ██╔══██╗ ██╔═══██╗ ██║      ██╔════╝ ██║ ██╔╝ ██║"
-    echo -e "███████╗ █████╗   ██████╔╝ ██║   ██║ ██║      ███████╗ █████╔╝  ██║"
-    echo -e "╚════██║ ██╔══╝   ██╔═══╝  ██║   ██║ ██║      ╚════██║ ██╔═██╗  ██║"
-    echo -e "███████║ ███████╗ ██║      ╚██████╔╝ ███████╗ ███████║ ██║  ██╗ ██║"
-    echo -e "╚══════╝ ╚══════╝ ╚═╝       ╚═════╝  ╚══════╝ ╚══════╝ ╚═╝  ╚═╝ ╚═╝"
+    echo -e "██╗  ██╗  ██████╗  ██╗      ███████╗ ███████╗ ██╗  ██╗ ██╗   ██╗"
+    echo -e "██║  ██║ ██╔═══██╗ ██║      ██╔════╝ ██╔════╝ ██║ ██╔╝ ╚██╗ ██╔╝"
+    echo -e "███████║ ██║   ██║ ██║      █████╗   ███████╗ █████╔╝   ╚████╔╝ "
+    echo -e "██╔══██║ ██║   ██║ ██║      ██╔══╝   ╚════██║ ██╔═██╗    ╚██╔╝  "
+    echo -e "██║  ██║ ╚██████╔╝ ███████╗ ███████╗ ███████║ ██║  ██╗    ██║   "
+    echo -e "╚═╝  ╚═╝  ╚═════╝  ╚══════╝ ╚══════╝ ╚══════╝ ╚═╝  ╚═╝    ╚═╝   "
 
-    SEP_DC="0xd960606c3c748B5502De2a81756E63ad0E1480c5"
+    HOLE_DC="0xd960606c3c748B5502De2a81756E63ad0E1480c5"
 
     # Main Command
-    CO1="cast send \
-    ${SEP_DC} \
-    'store(uint256)' 31333333333337 \
-    --rpc-url ${rpcz[0]} \
-    --private-key ${keyz[0]} \
-    "
+    CO1="cast call \
+    ${HOLE_DC} \
+    'retrieve()' \
+    --rpc-url ${rpcz[1]}  \
+    | cast --to-dec"
 
     # Execution Sequence
     echo -e "${GREEN}Command: ${NC}${CO1}"
@@ -212,9 +212,9 @@ cast_sep1_multi() {
         echo "Command: $CO1"
         echo "Result: $RESULT"
         echo "----------------------------------------"
-    } >>"./logs/cast_send_sepolia1.txt"
+    } >>"./logs/cast_retrieve_holesky1.txt"
     echo -e "${GREEN}Result: ${NC}${RESULT}"
 }
 
 # Execution
-cast_sep1_multi
+cast_hol1_multi
