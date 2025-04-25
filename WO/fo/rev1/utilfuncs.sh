@@ -89,7 +89,7 @@ cast_send_hol1() {
     echo -e "██║  ██║ ╚██████╔╝ ███████╗ ███████╗ ███████║ ██║  ██╗    ██║   "
     echo -e "╚═╝  ╚═╝  ╚═════╝  ╚══════╝ ╚══════╝ ╚══════╝ ╚═╝  ╚═╝    ╚═╝   "
 
-    HOLE_DC="0x764Ae21f060100230a3e5614F6e44D80526a4275"
+    HOLE_DC="0xd960606c3c748B5502De2a81756E63ad0E1480c5"
 
     # Main Command
     CO1="cast send \
@@ -182,6 +182,8 @@ panty_loope() {
         cast_send_hol1
     done
 }
+
+# /////////////////
 
 # Execution
 cast_send_hol1
