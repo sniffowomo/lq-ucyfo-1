@@ -80,7 +80,7 @@ cast_send_anvil1() {
 
 # Cast Send to Holesky
 cast_send_hol1() {
-    h1 "cast send to holeksy"
+    h1 "cast send to holeksy - Transfer Function"
 
     echo -e "██╗  ██╗  ██████╗  ██╗      ███████╗ ███████╗ ██╗  ██╗ ██╗   ██╗"
     echo -e "██║  ██║ ██╔═══██╗ ██║      ██╔════╝ ██╔════╝ ██║ ██╔╝ ╚██╗ ██╔╝"
@@ -183,7 +183,7 @@ panty_loope() {
     done
 }
 
-# /////////////////
+# ///////////////// Seplia Deployed Contract Interaction ////////////////
 
 # Execution
 cast_send_hol1
