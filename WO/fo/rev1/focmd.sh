@@ -115,7 +115,7 @@ fo_create_holeksy() {
         --private-key ${keyz[0]} \
         --etherscan-api-key ${ETHERSCAN_API_KEY} \
         --optimize true \
-        --optimizer-runs 999\
+        --optimizer-runs 9999 \
         --build-info --build-info-path outz/ \
         --verify --broadcast \
         --out outz/ \
