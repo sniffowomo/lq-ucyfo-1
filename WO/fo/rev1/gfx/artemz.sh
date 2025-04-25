@@ -36,7 +36,10 @@ c2() {
     FIL="a.jpg"
     CO="artem --border --no-color $FIL"
     echo -e "${GREEN} Executin the command: ${CO} ${NC}"
-    $CO
+
+    OUTPUT=$($CO 2>&1)
+    echo "$OUTPUT" >c2_output.txt
+    echo "$OUTPUT"
 }
 
 # Rotating image clockwise
@@ -65,5 +68,4 @@ c5() {
 }
 
 # Execution
-b1
-c5
+c2

@@ -1,0 +1,2 @@
+[ERROR] File a.jpg does not exist
+[ERROR] Artem exited with code: 66
