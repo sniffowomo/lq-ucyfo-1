@@ -197,19 +197,27 @@ cast_hol1_multi() {
 
     HOLE_DC="0xd960606c3c748B5502De2a81756E63ad0E1480c5"
 
-    # Main Command
+    # Retrieve Function
     CO1="cast call \
     ${HOLE_DC} \
     'retrieve()' \
     --rpc-url ${rpcz[1]}  \
     | cast --to-dec"
 
+    # Set Function
+    CO2="cast send \
+    ${HOLE_DC} \
+    'store(uint256)' 31333333333337 \
+    --rpc-url ${rpcz[1]} \
+    --private-key ${keyz[0]} \
+    "
+
     # Execution Sequence
     echo -e "${GREEN}Command: ${NC}${CO1}"
-    RESULT=$(eval "$CO1")
+    RESULT=$(eval "$CO2")
     {
         echo "++++++++++++++++ $(date) ++++++++++++++++"
-        echo "Command: $CO1"
+        echo "Command: $CO2"
         echo "Result: $RESULT"
         echo "----------------------------------------"
     } >>"./logs/cast_retrieve_holesky1.txt"
