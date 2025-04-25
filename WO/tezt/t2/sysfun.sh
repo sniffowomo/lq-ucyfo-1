@@ -137,7 +137,7 @@ cast_bytecode_disassemmble() {
 cast_interface() {
     h1 "Cast get interface of contract"
 
-    KONTRACT="0xa3AE6cDcF57E08437B17Ce5C8E53232cc4C876Fc"
+    KONTRACT="0x7778ae20B067247Bb906488788DB9eB0Ae0c27Ad"
     CHAIN="sepolia"
 
     # Create filename with date appended (format: YYYYMMDD_HHMMSS)
