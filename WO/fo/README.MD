@@ -16,3 +16,4 @@ Dira | 🔢
 [`ffs2`](./ffs2/) | Foundry Project Second Try 
 [`hh`](./hh/) | Learning HardHat in this
 [`cabal.sh`](./cabal.sh) | Script to find out balances
+[`rev1`](./rev1/) | Doing remixfundmeinfoundry here to revise booty licking techniques.
