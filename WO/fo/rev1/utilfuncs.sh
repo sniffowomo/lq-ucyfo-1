@@ -49,6 +49,126 @@ ca1() {
     echo -e "${TO_CONVERT} to decimal = ${GREEN}$RESULT${NC}"
 }
 
+# --- Cast - get contract bytecode
+cast_bytecode() {
+    h1 "Cast Get Contract Bytecode"
+
+    KONTRACT="0xDb441F74E8B7307220823e228659415fFB7A59aa"
+
+    # Create filename with date appended (format: YYYYMMDD_HHMMSS)
+    DATE_STAMP=$(date '+%Y%m%d_%H%M%S')
+    OUTPUT_FILE="cmdrun/cast_bytecode_run_${DATE_STAMP}.txt"
+
+    co1="cast code $KONTRACT -r ${rpcz[1]}"
+    echo -e "${GREEN}Command: ${NC}${co1}"
+
+    # First write the date to the file
+    echo "Date: $(date '+%Y-%m-%d %H:%M:%S')" >"$OUTPUT_FILE"
+    echo "Command: $co1" >>"$OUTPUT_FILE"
+    echo "-------------------------------------------" >>"$OUTPUT_FILE"
+
+    # Now append the command output to the file that already has the date
+    output=$(eval "$co1" | tee -a "$OUTPUT_FILE")
+
+    echo -e "${GREEN}Output: ${NC} \n----\n $output $"
+
+    echo -e "\n${GREEN}Bytecode saved to:${NC} $OUTPUT_FILE"
+
+}
+
+# --- Cast - Source
+cast_source() {
+    h1 "Cast source get contract source"
+
+    KONTRACT="0x4c34050168E0e19EEC6fB6d462BeD51840350c43"
+
+    # Create filename with date appended (format: YYYYMMDD_HHMMSS)
+    DATE_STAMP=$(date '+%Y%m%d_%H%M%S')
+    OUTPUT_FILE="cmdrun/cast_src_run_${DATE_STAMP}.txt"
+    CHAIN="holesky"
+
+    co1="cast source ${KONTRACT} \
+    -d cmdrun \
+    -e ${ETHERSCAN_API_KEY} \
+    -c ${CHAIN} "
+
+    echo -e "${GREEN}Command: ${NC}${co1}"
+
+    # First write the date to the file
+    echo "Date: $(date '+%Y-%m-%d %H:%M:%S')" >"$OUTPUT_FILE"
+    echo "Command: $co1" >>"$OUTPUT_FILE"
+    echo "-------------------------------------------" >>"$OUTPUT_FILE"
+
+    # Now append the command output to the file that already has the date
+    output=$(eval "$co1" | tee -a "$OUTPUT_FILE")
+
+    echo -e "${GREEN}Output: ${NC} \n----\n $output $"
+
+    echo -e "\n${GREEN}Bytecode saved to:${NC} $OUTPUT_FILE"
+}
+
+# --- Cast - etherscan source
+cast_bytecode_disassemmble() {
+    h1 "cast source get sourcecode of contract"
+
+    KONTRACT="0xDb441F74E8B7307220823e228659415fFB7A59aa"
+
+    # Create filename with date appended (format: YYYYMMDD_HHMMSS)
+    DATE_STAMP=$(date '+%Y%m%d_%H%M%S')
+    OUTPUT_FILE="cmdrun/cast_ethsrc_${DATE_STAMP}.txt"
+
+    co1="cast source $KONTRACT -r ${rpcz[1]}"
+    echo -e "${GREEN}Command: ${NC}${co1}"
+
+    # First write the date to the file
+    echo "Date: $(date '+%Y-%m-%d %H:%M:%S')" >"$OUTPUT_FILE"
+    echo "Command: $co1" >>"$OUTPUT_FILE"
+    echo "-------------------------------------------" >>"$OUTPUT_FILE"
+
+    # Now append the command output to the file that already has the date
+    output=$(eval "$co1" | tee -a "$OUTPUT_FILE")
+
+    echo -e "${GREEN}Output: ${NC} \n----\n $output $"
+
+    echo -e "\n${GREEN}Bytecode saved to:${NC} $OUTPUT_FILE"
+}
+
+#--- Cast Interface ---
+cast_interface() {
+    h1 "Cast get interface of contract"
+
+    KONTRACT="0x7778ae20B067247Bb906488788DB9eB0Ae0c27Ad"
+    CHAIN="holesky"
+
+    # Create filename with date appended (format: YYYYMMDD_HHMMSS)
+    DATE_STAMP=$(date '+%Y%m%d_%H%M%S')
+    OUTPUT_FILE="cmdrun/cast_Interface_${DATE_STAMP}.txt"
+
+    co1="cast interface $KONTRACT \
+    -o cmdrun/${KONTRACT}.sol \
+    -c ${CHAIN} \
+    -e ${ETHERSCAN_API_KEY} "
+
+    echo -e "${GREEN}Command: ${NC}${co1}"
+
+    # First write the date to the file
+    echo "Date: $(date '+%Y-%m-%d %H:%M:%S')" >"$OUTPUT_FILE"
+    echo "Command: $co1" >>"$OUTPUT_FILE"
+    echo "-------------------------------------------" >>"$OUTPUT_FILE"
+
+    # Now append the command output to the file that already has the date
+    output=$(eval "$co1" | tee -a "$OUTPUT_FILE")
+
+    echo -e "${GREEN}Output: ${NC} \n----\n $output $"
+
+    echo -e "\n${GREEN}RunOutput = :${NC} $OUTPUT_FILE"
+}
+
+# //////////////////// Cast send and call functions ////////////////
+# //////////////////// Cast send and call functions ////////////////
+# //////////////////// Cast send and call functions ////////////////
+# //////////////////// Cast send and call functions ////////////////
+
 # Using cast to interact with accounts
 cast_send_anvil1() {
     h1 "cast send to interact with contracts"
