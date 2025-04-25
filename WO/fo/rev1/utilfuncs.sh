@@ -184,9 +184,37 @@ panty_loope() {
 }
 
 # ///////////////// Seplia Deployed Contract Interaction ////////////////
+cast_sep1_multi() {
+    h1 "cast send multiple commands"
+
+    echo -e "███████╗ ███████╗ ██████╗   ██████╗  ██╗      ███████╗ ██╗  ██╗ ██╗"
+    echo -e "██╔════╝ ██╔════╝ ██╔══██╗ ██╔═══██╗ ██║      ██╔════╝ ██║ ██╔╝ ██║"
+    echo -e "███████╗ █████╗   ██████╔╝ ██║   ██║ ██║      ███████╗ █████╔╝  ██║"
+    echo -e "╚════██║ ██╔══╝   ██╔═══╝  ██║   ██║ ██║      ╚════██║ ██╔═██╗  ██║"
+    echo -e "███████║ ███████╗ ██║      ╚██████╔╝ ███████╗ ███████║ ██║  ██╗ ██║"
+    echo -e "╚══════╝ ╚══════╝ ╚═╝       ╚═════╝  ╚══════╝ ╚══════╝ ╚═╝  ╚═╝ ╚═╝"
+
+    SEP_DC="0xd960606c3c748B5502De2a81756E63ad0E1480c5"
+
+    # Main Command
+    CO1="cast send \
+    ${SEP_DC} \
+    'store(uint256)' 31333333333337 \
+    --rpc-url ${rpcz[0]} \
+    --private-key ${keyz[0]} \
+    "
+
+    # Execution Sequence
+    echo -e "${GREEN}Command: ${NC}${CO1}"
+    RESULT=$(eval "$CO1")
+    {
+        echo "++++++++++++++++ $(date) ++++++++++++++++"
+        echo "Command: $CO1"
+        echo "Result: $RESULT"
+        echo "----------------------------------------"
+    } >>"./logs/cast_send_sepolia1.txt"
+    echo -e "${GREEN}Result: ${NC}${RESULT}"
+}
 
 # Execution
-cast_send_hol1
-# cast_send_sep1
-# cast_retrieve_hol1
-# panty_loope
+cast_sep1_multi
