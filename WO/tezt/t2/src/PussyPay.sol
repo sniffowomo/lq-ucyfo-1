@@ -16,7 +16,10 @@ interface BootyToken {
     function transferFrom(address from, address to, uint256 amount) external returns (bool);
 }
 
+import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+
 contract PantyPay {
+    using SafeERC20 for IERC20;
     BootyToken public bootyToken;
     address public owner;
     
@@ -63,8 +66,7 @@ contract PantyPay {
     function withdrawBootyToken() public {
         require(msg.sender == owner, "Only owner can withdraw tokens");
         
-        uint256 tokenBalance = bootyToken.balanceOf(address(this));
-        require(tokenBalance > 0, "No tokens to withdraw");
+        IERC20(address(bootyToken)).safeTransfer(msg.sender, tokenBalance);
         
         require(bootyToken.transfer(msg.sender, tokenBalance), 
                 "Token withdrawal failed");
